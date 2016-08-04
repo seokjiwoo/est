@@ -1,0 +1,159 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>Membership </li>
+			<li>My Page</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>My Page</h2></section>
+	<section class="contents_area mgb0">
+		<div class="contents login">
+			<div class="log_tables pb15 bdb1">
+				<table summary="개인정보수정표(성명,아이디,비밀번호,생년월일,성별,이메일,휴대번호,정보수신)">
+					<caption>개인정보수정표</caption>
+					<colgroup>
+						<col width="20%" />
+						<col width="80%" />
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="my1">성명</label></th>
+							<td><span class="b_input"><input type="text" class="in_text" id="my1" value="한채윤" /></span></td>
+						</tr>
+						<tr>
+							<th><label for="my2">아이디</label></th>
+							<td>
+								<span class="b_input"><input type="text" class="in_text" id="my2" value="xyz1007" /></span>
+							</td>
+						</tr>
+						<tr>
+							<th>비밀번호</th>
+							<td><a href="#" class="l_btn2 gray fff p_call" data-name="password_lp">비밀번호 변경</a></td>
+						</tr>
+						<tr>
+							<th></th>
+							<td>
+								<p class="cgray">
+									6자 이상 16자 이하로 설정하세요. <br /> 특수문자중 (~),(.),(,)는 사용할 수 없습니다.
+								</p>
+							</td>
+						</tr>
+						<tr>
+							<th>생년월일</th>
+							<td>
+								<ul class="input_list">
+									<li>
+										<span class="b_select" title="연도선택">
+											<select class="sel">
+												<option>2014년</option>
+											</select>
+										</span>
+									</li>
+									<li>
+										<span class="b_select" title="월선택">
+											<select class="sel">
+												<option>1월</option>
+											</select>
+										</span>
+									</li>
+									<li>
+										<span class="b_select" title="일선택">
+											<select class="sel">
+												<option>1일</option>
+											</select>
+										</span>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>성별</th>
+							<td>
+								<ul class="radio_set">
+									<li>
+										<input type="radio" name="sel" id="sel1" class="rdo" />
+										<label for="sel1">남자</label>
+									</li>
+									<li>
+										<input type="radio" name="sel" id="sel2" class="rdo" checked />
+										<label for="sel2">여자</label>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>이메일</th>
+							<td>
+								<ul class="input_list2">
+									<li><span class="b_input"><input type="text" class="in_text" title="이메일입력" value="mintbox" /></span></li>
+									<li>
+										<span class="b_select">
+											<select class="sel" title="이메일선택">
+												<option>선택</option>
+											</select>
+										</span>
+									</li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>휴대번호</th>
+							<td>
+								<ul class="input_list">
+									<li>
+										<span class="b_select">
+											<select class="sel" title="휴대전화번호 앞자리 선택">
+												<option>010</option>
+											</select>
+										</span>
+									</li>
+									<li><span class="b_input"><input type="text" class="in_text" title="휴대전화번호 첫번째 항목입력" value="3773" /></span></li>
+									<li><span class="b_input"><input type="text" class="in_text" title="휴대전화번호 두번째 항목입력" value="7653" /></span></li>
+								</ul>
+							</td>
+						</tr>
+						<tr>
+							<th>정보수신</th>
+							<td>
+								<p class="ovh">
+									<input type="checkbox" id="ch1" class="chk fl mgr5" checked />
+									<label for="ch1" class="inline">이벤트 등 이스타항공의 정보를 받겠습니다.</label>
+								</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="mt15"><a href="#" class="l_btn2 gray fff w112 mgauto">휴대폰인증</a></div>
+			<div class="result_box2 mt10">
+				<p class="tac bd">남은시간: <em class="cred">00:47</em></p>
+				<ul class="input_list3 mt15">
+					<li><span class="b_input"><input type="text" class="in_text" title="인증번호입력" /></span></li>
+					<li><a href="#" class="l_btn2 white f00">인증하기</a></li>
+					<li><a href="#" class="l_btn2 gray fff">재발송</a></span></li>
+				</ul>
+				<ul class="con_list2">
+					<li>입력하신 휴대폰 번호로 인증번호가 전송되었습니다.</li>
+					<li>5분 내에 입력해 주시기 바랍니다.</li>
+				</ul>
+			</div>
+			<div class="mt15 result_box2">
+				<ul class="ovh">
+					<li class="fl w49p mgr5"><span class="b_input"><input type="text" class="in_text" title="인증번호입력" /></span></li>
+					<li class="fl mt10 b">인증되었습니다.</li>
+				</ul>
+				<ul class="con_list2">
+					<li>입력하신 휴대폰 번호로 인증번호가 전송되었습니다.</li>
+					<li>5분 내에 입력해 주시기 바랍니다.</li>
+				</ul>
+			</div>
+			<div class="mt15">
+				<div class="ovh">
+					<a href="#" class="l_btn red fff fl w49p mgr2p">수정</a>
+					<a href="#" class="l_btn white fl w49p">취소</a>
+				</div>
+			</div>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

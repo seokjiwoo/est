@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>css 가이드</title>
+	<link rel="stylesheet" href="./css/import.css">
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body>
+	<h2>버튼</h2>
+	<div class="mt5">
+		<a href="#" class="s_btn green fff w68">추천</a>
+		<a href="#" class="s_btn red fff w68">등록</a>
+		<a href="#" class="s_btn red fff w68">수정</a>
+		<a href="#" class="s_btn white w68">삭제</a>
+		<a href="#" class="s_btn white w68">취소</a>
+		<a href="#" class="s_btn gray fff w68">목록</a>
+		<a href="#" class="s_btn red fff w86">댓글등록</a>
+	</div>
+
+	<h2 class="mt20">컨포넌트</h2>
+	<div class="mt5">
+
+		<span class="b_select w72">
+			<select class="sel">
+				<option>제목+내용</option>
+			</select>
+		</span>
+
+		<span class="b_input">
+			<input type="text" class="in_text" />
+		</span>
+
+		<span class="s_input">
+			<input type="text" class="in_text" />
+			<button class="search_btn"><span class="sel"></span></button>
+		</span>
+
+		<span class="b_area">
+			<textarea maxlength="40" class="in_area">400자까지 입력이 가능합니다. 댓글을 등록해주세요.</textarea>
+		</span>
+
+	</div>
+
+	<h2 class="mt20">게시판 , 테이블</h2>
+	<div class="mt5">
+
+		<div class="paging">
+			<a href="#" class="p-prev"><img src="./images/btn/pprev_btn.png" alt="" /></a>
+			<a href="#" class="prev"><img src="./images/btn/prev_btn.png" alt="" /></a>
+			<span class="count"><strong>1</strong> / 100</span>
+			<a href="#" class="next"><img src="./images/btn/next_btn.png" alt="" /></a>
+			<a href="#" class="n-next"><img src="./images/btn/nnext_btn.png" alt="" /></a>
+		</div>
+		
+		<div class="tables1 mt10">
+			<table summary="">
+				<caption></caption>
+				<colgrpup>
+					<col width="20%" />
+					<col width="40%" />
+					<col width="40%" />
+				</colgrpup>
+				<thead>
+					<tr>
+						<th>기준</th>
+						<th>국내선</th>
+						<th>국제선</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>무게</td>
+						<td>15Kg</td>
+						<td>15Kg</td>
+					</tr>
+					<tr>
+						<td>용적</td>
+						<td>
+							가로, 세로,<br />
+							높이의 합이<br />
+							203cm 이하
+						</td>
+						<td>
+							가로, 세로,
+							높이의 합이
+							203cm 이하
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="tables2 mt10">
+			<table summary="">
+				<caption></caption>
+				<colgrpup>
+					<col width="20%" />
+					<col width="40%" />
+					<col width="40%" />
+				</colgrpup>
+				<thead>
+					<tr>
+						<th>기준</th>
+						<th>국내선</th>
+						<th>국제선</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>무게</td>
+						<td>15Kg</td>
+						<td>15Kg</td>
+					</tr>
+					<tr>
+						<td>용적</td>
+						<td>
+							가로, 세로,<br />
+							높이의 합이<br />
+							203cm 이하
+						</td>
+						<td>
+							가로, 세로,
+							높이의 합이
+							203cm 이하
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+	</div>
+
+	<h2 class="mt20">텝메뉴</h2>
+	<ul class="tab_menu mt10">
+		<li><a href="#">전체</a></li>
+		<li class="on"><a href="#">예매</a></li>
+		<li><a href="#">공항서비스</a></li>
+		<li><a href="#">수하물</a></li>
+		<li><a href="#">홈페이지</a></li>
+		<li><a href="#">특수고객</a></li>
+		<li><a href="#">기타</a></li>
+		<li><a href="#">기내</a></li>
+	</ul>
+
+</body>
+</html>

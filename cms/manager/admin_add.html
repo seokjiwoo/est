@@ -1,0 +1,92 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 1;		//GNB depth
+var lnbDep1 = 1;		//LNB 1depth
+var lnbDep2 = 3;		//LNB 2depth
+var lnbDep3 = 0;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_manager.html" ; ?>
+	<article>
+		<h2>관리자 추가</h2>
+			<div class="box">
+				<h3>관리자 상세정보</h3>
+					<div>
+						<form>
+						<table class="writeTable">
+							<colgroup><col width="12%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>직원구분</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">내부직원</label>
+									<input type="radio" name="" id="" /> <label for="">외부직원</label>
+								</td>
+							</tr>
+							<tr>
+								<th>사원찾기</th>
+								<td>
+									<span class="input_area"><label for="">사원이름</label> <input type="text" title="" class="txt t1" /></span>
+									<span class="input_area"><label for="">사번</label> <input type="text" title="" class="txt t1" /></span>
+									<span class="input_area"><label for="">이메일주소</label> <input type="text" title="" class="txt t2" /> <a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />사원찾기</b></a></span>
+								</td>
+							</tr>
+							<tr>
+								<th>관리등급</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">최고관리자</label>
+									<input type="radio" name="" id="" /> <label for="">부관리자</label>
+									<input type="radio" name="" id="" /> <label for="">업무요청</label>
+								</td>
+							</tr>
+							<tr>
+								<th>관리 대상 카테고리</th>
+								<td>
+									<input type="checkbox" name="" id="" /> <label for="">관리자 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">기본 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">콘텐츠 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">게시판 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">웹로그 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">O2 FlatForm 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">통합검색 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">업무요청 게시판</label>
+								</td>
+							</tr>
+							<tr>
+								<th>관리 대상 카테고리</th>
+								<td>
+									<input type="checkbox" name="" id="" /> <label for="">기본 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">콘텐츠 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">게시판 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">웹로그 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">O2 FlatForm 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">통합검색 관리</label>
+									<input type="checkbox" name="" id="" /> <label for="">업무요청 게시판</label>
+								</td>
+							</tr>
+							<tr>
+								<th>관리 대상 카테고리</th>
+								<td>
+									<input type="checkbox" name="" id="" /> <label for="">업무요청 게시판</label>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						</form>
+					</div>
+			</div>
+			<p class="btn_r">
+				<a href="" class="btn btn_box1"><b>취소하기</b></a>
+				<a href="" class="btn btn_box2"><b>등록하기</b></a>
+			</p>
+			<p class="btn_l">
+				<a href="" class="btn btn_box3"><b>목록으로</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>

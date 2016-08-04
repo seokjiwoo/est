@@ -1,0 +1,83 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>항공권 예매</li>
+			<li>항공권 예매</li>
+			<li>결제정보 입력</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>항공권 예매</h2></section>
+	<section class="contents_area mgb0 bdbn1">
+		<div class="contents schedule">
+			<ul class="sc_location">
+				<li>01</li>
+				<li>02</li>
+				<li>03</li>
+				<li class="on">04.결제정보</li>
+				<li>05</li>
+			</ul>
+			<div class="sc_box mt10">
+				<div class="sc_in_box">
+					<h3 class="title2 pt15 pb15 bdb1">결제정보 입력</h3>
+					<div class="sc_start">
+						<table summary="결제정보 입력표(총 결제금액,카드구분,카드종류,할부기간)">
+							<caption>결제정보 입력표</caption>
+							<colgroup>
+								<col width="30%" />
+								<col width="70%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th><label for="gj1">총 결제금액</label></th>
+									<td>
+										<span class="b_input">
+											<input type="text" class="in_text" value="\152,600" id="gj1" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th><label for="gj2">카드구분</label></th>
+									<td>
+										<span class="b_select">
+											<select class="sel" id="gj2">
+												<option>개인/법인(기명)<option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th><label for="gj3">카드종류</label></th>
+									<td>
+										<span class="b_select">
+											<select class="sel" id="gj3">
+												<option>선택해주세요.<option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th><label for="gj4">할부기간</label></th>
+									<td>
+										<span class="b_select">
+											<select class="sel" id="gj4">
+												<option>일시불<option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tac mt15">
+						<a href="#" class="s_btn gray fff w120 p_call" data-name="interest_lp">무이자 할부 안내</a>
+					</div>
+				</div>
+			</div>
+			<div class="ovh mt10">
+				<span class="cancel w49p fl p_call" data-name="cancel_lp"><a href="#">최소</a></span>
+				<span class="next_btn w49p fr"><a href="#">결제</a></span>
+			</div>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

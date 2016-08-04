@@ -1,0 +1,270 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>항공권 예매</li>
+			<li>탑승자 정보입력</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>탑승자 정보입력</h2></section>
+	<section class="contents_area mgb0">
+		<div class="contents schedule bdbn1">
+			<ul class="sc_location">
+				<li>01</li>
+				<li>02</li>
+				<li class="on">03.탑승자 정보입력</li>
+				<li>04</li>
+				<li>05</li>
+			</ul>
+			<div class="sc_box mt10">
+				<div class="sc_in_box">
+					<h3 class="title2 pt15 pb15 bdb1">예매자 정보</h3>
+					<div class="sc_start">
+						<table summary="예매자 정보입력표(예매자,연락처,이메일,운임할인대상)">
+							<caption>예매자 정보입력표</caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="30%" />
+								<col width="50%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">예매자</th>
+									<td class="pr5">
+										<span class="b_input">
+											<input type="text" class="in_text" value="한" title="이름앞글자입력" />
+										</span>
+									</td>
+									<td>
+										<span class="b_input">
+											<input type="text" class="in_text" value="채윤" title="나머지이름입력" />
+										</span>
+									</td>
+								</tr>
+								<tr scope="row">
+									<th><label for="am1">연락처</label></th>
+									<td colspan="2">
+										<span class="b_input">
+											<input type="text" class="in_text" value="010-1234-4593" id="am1" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<td colspan="2">
+										<p class="cgray">
+											예매에 대한 각종 변경 사항이나 오류 
+											사항에 대해서 연락드립니다.
+										</p>
+									</td>
+								</tr>
+								<tr scope="row">
+									<th><label for="am2">이메일</label></th>
+									<td colspan="2">
+										<span class="b_input">
+											<input type="text" class="in_text" value="010-1234-5678" id="am2" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"></th>
+									<td colspan="2">
+										<p class="cgray">예매하신 내역을 E-mail로 발송해드립니다.</p>
+									</td>
+								</tr>
+								<tr>
+									<th>운임할인대상</th>
+									<td colspan="2">
+										<span class="b_select">
+											<select class="sel" title="운임할인대상선택">
+												<option>운임할인대상선택</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sc_box mt10">
+				<div class="sc_in_box">
+					<h3 class="title2 pt15 pb15 bdb1">탑승자 대표 추가 연락처</h3>
+					<div class="sc_start">
+						<table summary="탑승자 대표 추가 연락처 입력표">
+							<caption>탑승자 대표 추가 연락처 입력표</caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="80%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="am3">연락처</label></th>
+									<td>
+										<span class="b_input">
+											<input type="text" class="in_text" value="010-1234-4593" id="am3" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2">
+										<ul class="chk_set mt10">
+											<li class="ovh">
+												<input type="radio" id="ch1" name="chk" class="rdo fl mgr5" />
+												<label for="ch1" class="inline">예매자와 탑승자가 동일한 경우 체크해주세요.</label>
+											</li>
+										</ul>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sc_box mt10">
+				<div class="sc_in_box">
+					<h3 class="title2 pt15 pb15 bdb1 ovh">
+						<span class="fl mt3">탑승자 정보 입력</span>
+						<a href="#" class="ss_btn gray fff w137 fr p_call" data-name="sale_lp">할인대상 안내 및 주의사항</a>
+					</h3>
+					<div class="sc_start">
+						<table summary="탑승자 정보 입력표(탑승자,생년월일,이메일,운임할인대상)">
+							<caption>탑승자 정보 입력표</caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="43%" />
+								<col width="37%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">탑승자</th>
+									<td class="pr5">
+										<span class="b_input">
+											<input type="text" class="in_text" value="한" title="이름앞글자입력" />
+										</span>
+									</td>
+									<td>
+										<span class="b_input">
+											<input type="text" class="in_text" value="채윤" title="나머지이름입력" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="ye1">생년월일</label></th>
+									<td class="pr5">
+										<!-- <span class="b_select">
+											<select class="sel" id="ye1">
+												<option>1980-09-10</option>
+											</select>
+										</span> -->
+										<span class="b_input"><input type="text" class="in_text" id="ye1" /></span>
+									</td>
+									<td colspan="2">
+										<span class="b_select">
+											<select class="sel" title="성별선택">
+												<option>여자</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="ye2">이메일</label></th>
+									<td colspan="2">
+										<span class="b_input">
+											<input type="text" class="in_text" id="ye2" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>운임할인<br />대상</th>
+									<td colspan="2">
+										<span class="b_select">
+											<select class="sel" title="운임할인대상선택">
+												<option>운임할인대상선택</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="sc_start mt15 bdt1">
+						<table summary="탑승자 정보 입력표(탑승자,생년월일,이메일,운임할인대상)">
+							<caption>탑승자 정보 입력표</caption>
+							<colgroup>
+								<col width="20%" />
+								<col width="43%" />
+								<col width="37%" />
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">탑승자</th>
+									<td class="pr5">
+										<span class="b_input">
+											<input type="text" class="in_text" value="한" title="이름앞글자입력" />
+										</span>
+									</td>
+									<td>
+										<span class="b_input">
+											<input type="text" class="in_text" value="채윤" title="나머지이름입력" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="ye1">생년월일</label></th>
+									<td class="pr5">
+										<!-- <span class="b_select">
+											<select class="sel" id="ye1">
+												<option>1980-09-10</option>
+											</select>
+										</span> -->
+										<span class="b_input"><input type="text" class="in_text" id="ye1" /></span>
+									</td>
+									<td colspan="2">
+										<span class="b_select">
+											<select class="sel" title="성별선택">
+												<option>여자</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="ye2">이메일</label></th>
+									<td colspan="2">
+										<span class="b_input">
+											<input type="text" class="in_text" id="ye2" />
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th>운임할인<br />대상</th>
+									<td colspan="2">
+										<span class="b_select">
+											<select class="sel" title="운임할인대상선택">
+												<option>운임할인대상선택</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<ul class="bdt1 mt15">
+						<li><p class="para mt10">탑승객 성함이 신분증 또는 여권상의 국/영문 철자와 틀릴 경우 탑승이 거절될 수 있습니다.  </p></li>
+						<li><p class="para mt10">항공편 이용 후에는 소급하여 할인을 적용 받을 수 없습니다.</p></li>
+						<li><p class="para mt10">모든 공시할인은 통상운임을 기준으로 할인되어 이중할인은 적용되지 않습니다.</p></li>
+					</ul>
+				</div>
+			</div>
+			<div class="ovh mt10">
+				<span class="reserved w49p fl">
+					<a href="#">사전좌석예약</a>
+				</span>
+				<span class="next_btn w49p fr">
+					<a href="#">다음단계</a>
+				</span>
+			</div>
+			
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

@@ -1,0 +1,323 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>Membership </li>
+			<li>나의 예매내역</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>나의 예매내역</h2></section>
+	<section class="contents_area mgb0">
+		<div class="contents login pd0">
+			<ul class="history_tab">
+				<li class="on"><a href="#">예약내역 조회</a></li>
+				<li><a href="#">취소내역 조회</a></li>
+			</ul>
+			<div class="history_box">
+				<!--  예약내역조회 -->
+				<div class="history_con on">
+
+					<div class="simple_history">
+						<h3 class="title">예약내역 조회</h3>
+						<div class="tables2 mt10">
+							<table summary="예약내역 조회 안내표(예매번호,예매자,여정,가는 일시,오는 일시,지불 금액)">
+								<caption>예약내역 조회 안내표</caption>
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">예매번호</th>
+										<td class="tal pl10">Z5M4US</td>
+									</tr>
+									<tr>
+										<th scope="row">예매자</th>
+										<td class="tal pl10">한채윤</td>
+									</tr>
+									<tr>
+										<th scope="row">여정</th>
+										<td class="tal pl10">김포  ↔   제주</td>
+									</tr>
+									<tr>
+										<th scope="row">가는 일시</th>
+										<td class="tal pl10">2014.11.17(월)  06:35~07:40</td>
+									</tr>
+									<tr>
+										<th scope="row">오는 일시</th>
+										<td class="tal pl10">2014.11.20(목)  12:10~13:15</td>
+									</tr>
+									<tr>
+										<th scope="row">지불 금액</th>
+										<td class="tal pl10">\300,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="mt15 tac">
+							<a href="#" class="l_btn red fff w112 inblock detail_view">상세내역 보기</a>
+						</div>
+					</div>
+					<!--  예약내역상세조회 펼치기 -->
+					<div class="detail_history">
+						<h3 class="title">예약내역 상세조회</h3>
+						<div class="tables2 mt10">
+							<table summary="예약내역 상세조회 안내표(예매번호,가는여정,출발일시,도착일시,편명,오는여정,출발일시,도착일시,편명,탑승자명/좌석 수,총지불금액)">
+								<caption>예약내역 상세조회 안내표</caption>
+								<colgroup>
+									<col width="25%" />
+									<col width="75%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">예매번호</th>
+										<td class="tal pl10">Z5M4US</td>
+									</tr>
+									<tr>
+										<th scope="row">가는여정</th>
+										<td class="tal pl10">김포 ↔ 제주</td>
+									</tr>
+									<tr>
+										<th scope="row">출발일시</th>
+										<td class="tal pl10">2014.11.17(월)  06:35</td>
+									</tr>
+									<tr>
+										<th scope="row">도착일시</th>
+										<td class="tal pl10">2014.11.17(월) 07:40</td>
+									</tr>
+									<tr>
+										<th scope="row">편명</th>
+										<td class="tal pl10">ZE229</td>
+									</tr>
+									<tr>
+										<th scope="row">오는여정</th>
+										<td class="tal pl10">제주 ↔ 김포</td>
+									</tr>
+									<tr>
+										<th scope="row">출발일시</th>
+										<td class="tal pl10">2014.11.20(목)  12:10</td>
+									</tr>
+									<tr>
+										<th scope="row">도착일시</th>
+										<td class="tal pl10">2014.11.20(목)  13:15</td>
+									</tr>
+									<tr>
+										<th scope="row">편명</th>
+										<td class="tal pl10">ZE214</td>
+									</tr>
+									<tr>
+										<th scope="row">탑승자명 <br />/좌석 수</th>
+										<td class="tal pl10">한채윤 / 2</td>
+									</tr>
+									<tr>
+										<th scope="row">총지불<br />금액</th>
+										<td class="tal pl10">\300,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="tables1 mt15">
+							<table summary="예약내역 상세조회 안내표(분류,는 여정,오는 여정)">
+								<caption>예약내역 상세조회 안내표</caption>
+								<colgroup>
+									<col widht="33%" />
+									<col widht="34%" />
+									<col widht="33%" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">분류</th>
+										<th scope="col">가는 여정</th>
+										<th scope="col">오는 여정</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th>항공운임</th>
+										<td>\240,000</td>
+										<td>\240,000</td>
+									</tr>
+									<tr>
+										<th>공항시설<br />사용료</th>
+										<td>\8,000</td>
+										<td>\8,000</td>
+									</tr>
+									<tr>
+										<th>유류<br />할증료</th>
+										<td>\17,600</td>
+										<td>\17,600</td>
+									</tr>
+									<tr>
+										<th>총<br />할인금액</th>
+										<td>\0</td>
+										<td>\0</td>
+									</tr>
+									<tr>
+										<th>총 수수료</th>
+										<td colspan="2">\0</td>
+									</tr>
+									<tr>
+										<th>총<br />사전좌석<br />예약료</th>
+										<td colspan="2">\80,000</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="tables2 mt15">
+							<table summary="운임보기표(이름/구분,한채윤 / 성인(여))">
+								<caption>운임보기표</caption>
+								<colgroup>
+									<col width="33%" />
+									<col width="77%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">이름/구분</th>
+										<td scope="row">한채윤 / 성인(여)</td>
+									</tr>
+									<tr>
+										<th>지불 금액</th>
+										<td><em class="cgreen bd">\300,000</em></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 운임상세보기 펼치기  -->
+						<div class="detail_show">
+							<div class="tables3 tdbd bdt0">
+								<table summary="탑승자운임상세 안내표(분류,가는 여정,오는 여정)">
+									<caption>탑승자운임상세 안내표</caption>
+									<colgroup>
+										<col width="33%">
+										<col width="34%">
+										<col width="33%">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="col">분류</th>
+											<th scope="col">가는 여정</th>
+											<th scope="col">오는 여정</th>
+										</tr>
+										<tr>
+											<td>항공운임</td>
+											<td>\120,000</td>
+											<td>\120,000</td>
+										</tr>
+										<tr>
+											<td>공항시설<br />사용료</td>
+											<td>\4,000</td>
+											<td>\4,000</td>
+										</tr>
+										<tr>
+											<td>유류<br />할증료</td>
+											<td>\8,800</td>
+											<td>\8,800</td>
+										</tr>
+										<tr>
+											<td>총<br />할인금액</td>
+											<td>\0</td>
+											<td>\0</td>
+										</tr>
+										<tr>
+											<td>총 수수료</td>
+											<td colspan="2">\0</td>
+										</tr>
+										<tr>
+											<td>총<br />사전좌석<br />예약료 </td>
+											<td colspan="2">\80,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<span class="detail gray w128 mgauto15 showBtn on"><a href="#">운임상세 보기</a></span>
+						<span class="detail_close bggreen w128 mgauto15 closeBtn"><a href="#">운임상세 닫기</a></span>
+						<!-- // 운임상세보기 펼치기  -->
+
+						<div class="tables2 mt15">
+							<table summary="운임보기표(이름/구분,한채윤 / 성인(여))">
+								<caption>운임보기표</caption>
+								<colgroup>
+									<col width="33%" />
+									<col width="77%" />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">이름/구분</th>
+										<td scope="row">한채윤 / 성인(여)</td>
+									</tr>
+									<tr>
+										<th>지불 금액</th>
+										<td><em class="cgreen bd">\300,000</em></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<!-- 운임상세보기 펼치기  -->
+						<div class="detail_show">
+							<div class="tables3 tdbd bdt0">
+								<table summary="탑승자운임상세 안내표(분류,가는 여정,오는 여정)">
+									<caption>탑승자운임상세 안내표</caption>
+									<colgroup>
+										<col width="33%">
+										<col width="34%">
+										<col width="33%">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="col">분류</th>
+											<th scope="col">가는 여정</th>
+											<th scope="col">오는 여정</th>
+										</tr>
+										<tr>
+											<td>항공운임</td>
+											<td>\120,000</td>
+											<td>\120,000</td>
+										</tr>
+										<tr>
+											<td>공항시설<br />사용료</td>
+											<td>\4,000</td>
+											<td>\4,000</td>
+										</tr>
+										<tr>
+											<td>유류<br />할증료</td>
+											<td>\8,800</td>
+											<td>\8,800</td>
+										</tr>
+										<tr>
+											<td>총<br />할인금액</td>
+											<td>\0</td>
+											<td>\0</td>
+										</tr>
+										<tr>
+											<td>총 수수료</td>
+											<td colspan="2">\0</td>
+										</tr>
+										<tr>
+											<td>총<br />사전좌석<br />예약료 </td>
+											<td colspan="2">\80,000</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<span class="detail gray w128 mgauto15 showBtn on"><a href="#">운임상세 보기</a></span>
+						<span class="detail_close bggreen w128 mgauto15 closeBtn"><a href="#">운임상세 닫기</a></span>
+						<!-- // 운임상세보기 펼치기  -->
+						
+						<div class="mt15">
+							<div class="ovh">
+								<a href="#" class="l_btn red fff fl w49p mgr2p">예약변경</a>
+								<a href="#" class="l_btn white fl w49p">예약취소</a>
+							</div>
+						</div>
+					</div>
+					<!-- //  예약내역상세조회 펼치기 -->
+					
+				</div>
+				<!-- // 예약내역조회 -->
+			</div>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

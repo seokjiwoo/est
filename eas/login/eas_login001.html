@@ -1,0 +1,83 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>Membership </li>
+			<li>로그인</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>로그인</h2></section>
+	<section class="contents_area mgb0">
+		<div class="contents login pd0">
+			<ul class="login_tab">
+				<li class="on"><a href="#">회원</a></li>
+				<li><a href="#">비회원</a></li>
+			</ul>
+			<div class="login_input mt15">
+
+				<div class="login_input_in on">
+					<div class="ovh">
+						<ul class="fl idpw">
+							<li><span class="log_input tx"><input type="text" class="in_text" title="아이디입력" /></span></li>
+							<li><span class="log_input pw mt6"><input type="password" class="in_text" title="비밀번호입력" value="" /></span></li>
+						</ul>
+						<a href="#" class="loginbtn fl" title="로그인버튼">로그인</a>
+					</div>
+					<ul class="chk_set mt15 pb15 bdb1">
+						<li>
+							<input type="checkbox" id="ch1" class="chk" checked />
+							<label for="ch1">아이디 저장</label>
+						</li>
+						<li>
+							<input type="checkbox" id="ch2" class="chk" />
+							<label for="ch2">비밀번호 저장</label>
+						</li>
+					</ul>
+					<div class="log_btnset">
+						<a href="#" class="searchid_btn w120 white fl"><span>아이디 찾기</span></a>
+						<a href="#" class="searchpw_btn w120 white fr"><span>비밀번호 찾기</span></a>
+					</div>
+				</div>
+
+				<div class="login_input_in">
+					<div class="ovh">
+						<ul class="fl idpw nomember">
+							<li><span class="b_input"><input type="text" class="in_text" title="예매번호입력" value="예매번호를 입력해주세요." /></span></li>
+							<li class="mt6">
+								<ul>
+									<li>
+										<span class="b_select">
+											<select class="sel" title="휴대전화번호 앞자리 선택">
+												<option>010</option>
+											</select>
+										</span>
+									</li>
+									<li><span class="b_input"><input type="text" class="in_text" title="휴대전화번호 첫번째 항목입력" /></span></li>
+									<li><span class="b_input"><input type="text" class="in_text" title="휴대전화번호 두번째 항목입력" /></span></li>
+								</ul>
+							</li>
+						</ul>
+						<a href="#" class="loginbtn fl" title="로그인버튼">로그인</a>
+					</div>
+					<p class="consent ovh mt15 pb15 bdb1">
+						<input type="checkbox" id="ch3" class="chk fl mgr5" />
+						<label for="ch3">
+							개인정보 수집 및 이용에 동의합니다. <br />
+							<em class="cgray">(수집된 개인정보는 저장되지 않고 폐기합니다.)</em>
+						</label>
+					</p>
+					<p class="mt15 ovh chance pb15 bdb1">
+						<span class="fl"><img src="../images/img/easter.png" alt="" /></span>
+						<span class="fl">
+							이스타항공 회원가입을 하시면, 요금 할인 및 각종 이벤트 혜택의 기회를 제공 받으실 수 있습니다. 아래의회원가입 버튼을 통해 가입해주세요.
+						</span>
+					</p>
+					<div class="tac mt15">
+						<a href="#" class="l_btn2 gray fff inblock w124">회원가입</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

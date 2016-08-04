@@ -1,0 +1,77 @@
+<? include "./inc/header.html"; ?>
+	<section class="main_visual">
+		<img src="/eas/images/img/visual.png" alt="" class="visual_bg" />
+		<div class="slogan">
+			<img src="/eas/images/img/slogan.png" alt="" />
+			<a href=""><img src="/eas/images/btn/start.png" alt="" /></a>
+		</div>
+	</section>
+	<section class="main_content">
+		<ul class="main_menu">
+			<li>
+				<a href="#">
+					<span>최저가운임</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>여행정보</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>나의 예매내역</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>출도착조회</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>사전좌석구매</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>진행이벤트</span>
+				</a>
+			</li>
+		</ul>
+		<ul class="main_notice mt6">
+			<li>
+				<a href="#">
+					<span>이스타항공 공지사항입니다. <i class="new">N</i></span>
+					<span>2014.09.14</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span>2014 인천 아시안게임에 따른 조기수속 ...</span>
+					<span>2014.09.14</span>
+				</a>
+			</li>
+		</ul>
+
+		<section class="slider mt7">
+			<div class="flexslider">
+				<ul class="slides">
+					<li><img src="/eas/images/img/01.jpg" alt=""></li>
+					<li><img src="/eas/images/img/02.jpg" alt=""></li>
+					<li><img src="/eas/images/img/03.jpg" alt=""></li>
+				</ul>
+			</div>
+		</section>
+		<script type="text/javascript">
+			$(window).load(function(){
+				$('.flexslider').flexslider({
+					  animation: "slide",
+					  start: function(slider){
+					    $('body').removeClass('loading');
+					  }
+				});
+			});
+		</script>
+	</section>
+<? include "./inc/footer.html"; ?>

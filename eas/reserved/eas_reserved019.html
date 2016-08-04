@@ -1,0 +1,62 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>항공권 예매</li>
+			<li>운항스케쥴</li>
+			<li>출도착 조회</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>출도착 조회</h2></section>
+	<section class="contents_area">
+		<div class="contents pd0">
+			<ul class="start_tab">
+				<li><a href="#">국내선</a></li>
+				<li  class="on"><a href="#">국제선</a></li>
+			</ul>
+			<div class="pd10 mt10">
+				<div class="pb15 bdb1">
+					<div class="log_tables pd10">
+						<table summary="출발지,도착지 선택표(출발지,도착지)">
+							<caption>출발지,도착지 선택표</caption>
+							<colgroup>
+								<col width="20%">
+								<col width="80%">
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row"><label for="mbr1">출발지</label></th>
+									<td>
+										<span class="b_select">
+											<select class="sel" id="mbr1">
+												<option>인천(ICN)</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row"><label for="mbr2">도착지</label></th>
+									<td>
+										<span class="b_select">
+											<select class="sel"  id="mbr2">
+												<option>도착지를 선택하세요.</option>
+											</select>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="tac mt15"><a href="#" class="l_btn2 red fff w80 inblock">조회하기</a></div>
+				<div class="result_box pd1010 mt20">
+					<ul class="s_list line18">
+						<li>항공편 출도착 확인은, 출발공항 현지 시각을 기준으로 하여 약 1일 간의 조회가 가능합니다.</li>
+						<li class="mt10">항공기 지연은 ‘출발’ 또는 ‘도착’이 30분 이상 늦어지는 경우를 말합니다.</li>
+						<li class="mt10">단, 안내되는 비행시간은 현지공항사정에 따라 차이가 발생될 수 있습니다. 기타 자세한 안내는 해당 공항에 문의하여 주시기 바랍니다.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

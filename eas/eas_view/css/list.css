@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+html, body {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:12px;
+	line-height:110%;
+	height:auto;
+	text-align:left;
+	font-family:"Malgun Gothic", "맑은고딕", Dotum, "돋움", Helvetica,Apple-Gothic,sans-serif;
+/*  font-family: dotum,'돋움',Helvetica,Apple-Gothic,sans-serif; */
+	-webkit-text-size-adjust: none;
+}
+
+
+img			{border:0;}
+form		{display:inline;}
+table 				{border-collapse:collapse;}
+h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,form,fieldset { margin:0; padding:0; }
+
+
+/* common */
+a { selector-dummy:expression(this.hideFocus=true);}
+a:active		{ color:#666;	 text-decoration:none; }
+a:link				{ color:#666;	 text-decoration:none; }
+a:visited		{ color:#666;	 text-decoration:none; }
+a:hover			{ color:#F63;	 text-decoration:none; font-weight: none;  }
+
+.red	 					{ color: #F00; }
+.bl	  					{ color: #006; }
+
+/* font */
+/* @font-face{font-family:NG;src:url('inc/font/NanumGothic.eot');src:local(※),url('inc/font/NanumGothic.woff') format('woff')}
+* {font-family:나눔고딕,NanumGothic,NG,돋움,Dotum,Arial,Helvetica,sans-serif;}*/
+
+
+/* float */
+.fl_l		{float:left !important;}
+.fl_r		{float:right !important;}
+.fl_none {float:none;}
+.fl_cl	{clear: both !important;}
+
+/* align */
+.vabl {vertical-align:baseline !important;}
+.vabm {vertical-align:3px !important;}
+.va {vertical-align:-4px !important; margin-top:5px !important;}
+.vat {vertical-align:top !important;}
+.vam {vertical-align:middle !important;}
+.vamb {vertical-align:bottom !important; margin-bottom:2px !important; /**margin-bottom:4px !important;*/}
+.vab {vertical-align:bottom !important;}
+
+.tal {text-align:left !important;}
+.tar {text-align:right !important;}
+.tac {text-align:center !important;}
+
+/* margin */
+.mg0		{margin:0px !important;}
+.mgl5	{margin-left:5px !important;}
+.mgl8	{margin-left:8px !important;}
+.mgl10 {margin-left:10px !important;}
+.mgl15 {margin-left:15px !important;}
+.mgl20 {margin-left:20px !important;}
+.mgl60 {margin-left:60px !important;}
+.mgt5 {margin-top:5px !important;}
+.mgt8 {margin-top:8px !important;}
+.mgt10 {margin-top:10px !important;}
+.mgt20 {margin-top:20px !important;}
+.mgt30 {margin-top:30px !important;}
+.mgb2 {margin-bottom:2px !important;}
+.mgb4 {margin-bottom:4px !important;}
+.mgb6 {margin-bottom:6px !important;}
+.mgb8 {margin-bottom:8px !important;}
+.mgb10 {margin-bottom:10px !important;}
+.mgb15 {margin-bottom:15px !important;}
+.mgb20 {margin-bottom:20px !important;}
+.mgb24 {margin-bottom:24px !important;}
+
+/*padding*/
+.pad0 {padding:0 !important;}
+.padt20 {padding-top:20px !important;}
+.padt30 {padding-top:30px !important;}
+
+/* common */
+.hidden, #content .hidden{visibility:hidden; position:absolute; left:-9999em; width:1px;height:1px;margin:0;padding:0;background:none;font-size:0;line-height:0;text-indent:-9999em}
+
+
+/* menu */
+.tab{position:relative;height:25px;margin:20px 0;padding-left:8px;background:url(http://static.naver.com/groupware/common/tab_menu.gif) repeat-x 0 100%;font-size:12px}
+.tab ul,.tab ul li{margin:0;padding:0}
+.tab ul li{list-style:none}
+.tab ul li,.tab ul li a{background:url(http://static.naver.com/groupware/2010/bg_tab_off.gif) no-repeat}
+.tab ul li{float:left;margin-right:-1px;line-height:22px}
+.tab ul li a{display:inline-block;padding:2px 36px 1px;_padding:3px 16px 0;background-position: 100% 0;font-weight:bold;color:#666;text-decoration:none !important}
+.tab ul li.on,.tab ul li.on a{background-image:url(http://static.naver.com/groupware/2010/bg_tab_on.gif)}
+.tab ul li.on a{color:#ff7141}
+
+/* Object */
+.tbl_type,.tbl_type th,.tbl_type td{border:0}
+.tbl_type{width:99%;border-bottom:2px solid #dcdcdc;font-size:12px;text-align:center;border-collapse:collapse;float: center;}
+.tbl_type caption{display:none}
+.tbl_type tfoot{background-color:#f5f7f9;font-weight:bold}
+.tbl_type th{padding:7px 0 4px;border-top:2px solid #dcdcdc;border-right:1px solid #dcdcdc;border-left:1px solid #dcdcdc;background-color:#f5f7f9;color:#666;font-size:12px;font-weight:bold}
+.tbl_type td{padding:6px 0 4px;border:1px solid #e5e5e5;}
+.tbl_type td.ranking{font-weight:bold}
+.tbl_type .tls{border-bottom:2px solid #dcdcdc;}

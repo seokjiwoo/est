@@ -1,0 +1,15 @@
+http://pub.eastarjet.com/status.html
+
+hosts
+112.169.122.156 pub.eastarjet.com
+
+url
+http://pub.eastarjet.com/
+
+ftp
+host : 112.169.122.156 (passive)
+id : sooooji
+pw : bvspub01
+path : /www
+
+112.169.122.156 pub.eastarjet.com

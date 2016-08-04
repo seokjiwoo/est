@@ -1,0 +1,73 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 1;		//LNB 1depth
+var lnbDep2 = 1;		//LNB 2depth
+var lnbDep3 = 2;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>추천검색어</h2>
+			<div class="box">
+				<h3>추천검색어 부분에 출력되는 키워드 단어, 출력순서 및 출력갯수를 설정합니다. </h3>
+					<div>
+						<form>
+						<table class="writeTable">
+							<colgroup><col width="12.5%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>추천검색어 단어 설정</th>
+								<td>
+									<div id="search_setting">
+										<p class="txta_wrap">
+										<textarea>
+이스타항공후기
+이스타항공기내식
+예약
+이벤트
+홈페이지
+회원
+가을 휴가
+게스트하우스
+올레길
+추석연휴
+이스타항공
+										</textarea>
+										</p>
+										<ul>
+											<li class="prefer_red">추천검색어 단어 추가 시 <span class="point_red">ENTER(엔터)</span> 한 후 단어입력해서 계속 추가하시면 됩니다. </li>
+											<li class="prefer_red">HTML 파일에서 사용 시 추천검색어 정보출력 태그명령어는 <span class="point_red">추천검색어</span>입니다.</li>
+											<li class="prefer_red">디자인상 적은 글자수를 가진 단어로 등록하시는 것이 유리합니다.</li>
+										</ul>
+										<dl>
+											<dt class="prefer_green">등록된 단어는 맞춤형 검색 상단의 <span class="point_green">추천검색어</span>에 <span class="point_green">태그</span>형태로<br />반영됩니다.</dt>
+											<dd><img src="/img/etc/sample_ecommend.png" alt="" /></dd>
+										</dl>
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>추천검색어 출력갯수 설정</th>
+								<td>
+									<input type="text" class="txt t3" /> 개
+									<p class="prefer_red">추천검색어가 <b class="point_red">출력될 갯수</b>를 지정합니다. (숫자만 입력)</p>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						</form>
+					</div>
+			</div>
+			<p class="btn_c">
+				<a href="" class="btn btn_box1"><b>취소하기</b></a>
+				<a href="" class="btn btn_box2"><b>설정 저장</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>

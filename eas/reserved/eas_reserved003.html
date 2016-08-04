@@ -1,0 +1,323 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>항공권 예매</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>항공권 예매</h2></section>
+	<section class="contents_area mgb0 bdbn1">
+		<div class="contents schedule">
+			<ul class="sc_location">
+				<li>01</li>
+				<li class="on">02. 항공편선택</li>
+				<li>03</li>
+				<li>04</li>
+				<li>05</li>
+			</ul>
+			<div class="sc_box pd0 mt10">
+				<ul class="tit_list bd">
+					<li>가는 여정 : 김포 → 제주</li>
+					<li>
+						<span class="cal_input bd0 w120 mgauto">
+							<input type="text" title="가는여정선택" class="in_text cred bd datepicker" readonly value="2014.11.17(월)" />
+						</span>
+					</li>
+				</ul>
+				<div class="sc_in_box pd0">
+					<div class="tables3 pd0">
+						<table summary="가는항공편선택표(편명출도착시간,기종,초특가운임,할인운임,통상 운임)">
+							<caption>가는항공편선택표</caption>
+							<colgroup>
+								<col width="14%" />
+								<col width="14%" />
+								<col width="24%" />
+								<col width="24%" />
+								<col width="24%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">편명<br />출도착<br />시간</th>
+									<th scope="col">기종</th>
+									<th scope="col" class="lsp1">초특가<br />운임</th>
+									<th scope="col">할인<br /> 운임</th>
+									<th scope="col">통상<br /> 운임</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="lsp1 bdt_gray">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1 bdt_gray">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td class="bdt_gray">
+										<input type="radio" name="price" id="p1" class="special p_call blind" data-name="consent_lp" />
+										<label for="p1" class="have">40,9000</label>
+									</td>
+									<td class="bdt_gray">
+										<input type="radio" name="price" id="p2" class="blind" />
+										<label for="p2" class="have">40,9000</label>
+									</td>
+									<td class="bdt_gray "><span class="soldout">매진</span></td>
+								</tr>
+								<tr>
+									<td class="lsp1">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td>
+										<input type="radio" name="price" id="p3" class="special p_call blind" data-name="consent_lp" />
+										<label for="p3" class="have">40,9000</label>
+									</td>
+									<td>
+										<input type="radio" name="price" id="p4" class="blind" />
+										<label for="p4" class="have">40,9000</label>
+									</td>
+									<td><span class="soldout">매진</span></td>
+								</tr>
+								<tr>
+									<td class="lsp1">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td>
+										<input type="radio" name="price" id="p5" class="special p_call blind" data-name="consent_lp" />
+										<label for="p5" class="have">40,9000</label>
+									</td>
+									<td>
+										<input type="radio" name="price" id="p6" class="blind" />
+										<label for="p6" class="have">40,9000</label>
+									</td>
+									<td><span class="soldout">매진</span></td>
+								</tr>
+								<tr>
+									<td class="lsp1">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td>
+										<input type="radio" name="price" id="p7" class="special p_call blind" data-name="consent_lp" />
+										<label for="p7" class="have">40,9000</label>
+									</td>
+									<td>
+										<input type="radio" name="price" id="p8" class="blind" />
+										<label for="p8" class="have">40,9000</label>
+									</td>
+									<td><span class="soldout">매진</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sc_box mt10 pd0">
+				<ul class="tit_list bd">
+					<li>오는여정 : 제주 → 김포</li>
+					<li>
+						<span class="cal_input bd0 w120 mgauto">
+							<input type="text" title="오는여정선택" class="in_text cred bd datepicker" readonly value="2014.11.17(월)" />
+						</span>
+					</li>
+				</ul>
+				<div class="sc_in_box pd0">
+					<div class="tables3 pd0">
+						<table summary="오는항공편선택표(편명출도착시간,기종,초특가운임,할인운임,통상 운임)">
+							<caption>오는항공편선택표</caption>
+							<colgroup>
+								<col width="14%" />
+								<col width="14%" />
+								<col width="24%" />
+								<col width="24%" />
+								<col width="24%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">편명<br />출도착<br />시간</th>
+									<th scope="col">기종</th>
+									<th scope="col">초특가<br />운임</th>
+									<th scope="col">할인<br /> 운임</th>
+									<th scope="col">통상<br /> 운임</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="lsp1 bdt_gray">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1 bdt_gray">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td class="bdt_gray">
+										<input type="radio" name="price1" id="p9" class="special p_call blind" data-name="consent_lp" />
+										<label for="p9" class="have">40,9000</label>
+									</td>
+									<td class="bdt_gray">
+										<input type="radio" name="price1" id="p10" class="blind" />
+										<label for="p10" class="have">40,9000</label>
+									</td>
+									<td class="bdt_gray"><span class="soldout">매진</span></td>
+								</tr>
+								<tr>
+									<td class="lsp1">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td>
+										<input type="radio" name="price1" id="p11" class="special p_call blind" data-name="consent_lp" />
+										<label for="p11" class="have">40,9000</label>
+									</td>
+									<td>
+										<input type="radio" name="price1" id="p12" class="blind" />
+										<label for="p12" class="have">40,9000</label>
+									</td>
+									<td><span class="soldout">매진</span></td>
+								</tr>
+								<tr>
+									<td class="lsp1 bdt_gray">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1 bdt_gray">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td class="bdt_gray">
+										<input type="radio" name="price1" id="p12" class="special p_call blind" data-name="consent_lp" />
+										<label for="p12" class="have">40,9000</label>
+									</td>
+									<td class="bdt_gray">
+										<input type="radio" name="price1" id="p13" class="blind" />
+										<label for="p13" class="have">40,9000</label>
+									</td>
+									<td class="bdt_gray"><span class="soldout">매진</span></td>
+								</tr>
+								<tr>
+									<td class="lsp1">
+										201 <br />
+										06:35 <br />
+										~ <br />
+										07:40
+									</td>
+									<td class="lsp1">
+										B737 <br />
+										- <br />
+										700
+									</td>
+									<td>
+										<input type="radio" name="price1" id="p13" class="special p_call blind" data-name="consent_lp" />
+										<label for="p13" class="have">40,9000</label>
+									</td>
+									<td>
+										<input type="radio" name="price1" id="p14" class="blind" />
+										<label for="p14" class="have">40,9000</label>
+									</td>
+									<td><span class="soldout">매진</span></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="sc_box mt10 pd0">
+				<ul class="tit_list bd">
+					<li>항공운임 등 총액</li>
+					<li><em class="cred bd">총액 : \142,600</em></li>
+				</ul>
+				<div class="sc_in_box pd0">
+					<div class="tables3 tdbd">
+						<table summary="항공운임 등 총액 안내표(분류,가는여정,오는여정)">
+							<caption>항공운임 등 총액 안내표</caption>
+							<colgroup>
+								<col width="33%" />
+								<col width="34%" />
+								<col width="33%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="분류">분류</th>
+									<th scope="가는여정">가는여정</th>
+									<th scope="오는여정">오는여정</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="bdt_gray">공항시설<br />사용료</td>
+									<td class="bdt_gray">\4,000</td>
+									<td class="bdt_gray">\4,000</td>
+								</tr>
+								<tr>
+									<td>유류할증료</td>
+									<td>\9,900</td>
+									<td>\9,900</td>
+								</tr>
+								<tr>
+									<td>총 할인금액</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+								<tr>
+									<td>총 수수료</td>
+									<td>0</td>
+									<td>0</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tac mt15 mb15">
+						<a href="#" class="s_btn gray fff w120 p_call" data-name="rule_lp">운임규정 안내</a>
+					</div>
+				</div>
+			</div>
+			<span class="next_btn mt10">
+				<a href="#">다음단계 (모바일결제)</a>
+			</span>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>
+
+
+
+

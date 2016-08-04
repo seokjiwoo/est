@@ -1,0 +1,193 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 3;		//LNB 1depth
+var lnbDep2 = 1;		//LNB 2depth
+var lnbDep3 = 2;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>게시판 생성</h2>
+			<div class="box">
+				<h3>게시판 상세정보</h3>
+					<div>
+						<form>
+						<table class="writeTable">
+							<colgroup><col width="17%" /><col width="38%" /><col width="9.5%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>그룹선택</th>
+								<td colspan="3">
+									<select style="width:227px">
+										<option>그룹선택</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판 ID</th>
+								<td colspan="3">
+									<input type="text" class="txt t5" />
+									<a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />아이디찾기</b></a>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판 제목</th>
+								<td colspan="3"><input type="text" class="txt t4" /></td>
+							</tr>
+							<tr>
+								<th>게시판 TYPE</th>
+								<td colspan="3">
+									<input type="radio" name="type" value="type1" id="" /> <label for="">일반</label>
+									<input type="radio" name="type" value="type2" id="" /> <label for="">갤러리</label>
+									<input type="radio" name="type" value="type3" id="" /> <label for="">Q&A</label>
+									<input type="radio" name="type" value="type4" id="" /> <label for="">FAQ</label>
+									<input type="radio" name="type" value="type5" id="" /> <label for="">블로그형</label>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판 카테고리</th>
+								<td colspan="3">
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+									<input type="text" class="txt t4" />
+									<span class="prefer_red ml10">카테고리는 | 로 구분</span>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판 페이지달 목록수</th>
+								<td colspan="3"><input type="text" class="txt t5" /></td>
+							</tr>
+							<tr>
+								<th>게시판 제목 길이</th>
+								<td colspan="3"><input type="text" class="txt t5" /></td>
+							</tr>
+							<tr class="line">
+								<th>실명여부</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+								</td>
+								<th>비밀글 여부</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+								</td>
+							</tr>
+							<tr>
+								<th>답글여부</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+								</td>
+								<th>추천여부</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+								</td>
+							</tr>
+							<tr>
+								<th>코멘트여부</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+								</td>
+								<th>링크여부</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+								</td>
+							</tr>
+							<tr>
+								<th>게시판 NEW 이미지 사용여부 / 시간</th>
+								<td colspan="3">
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+									<input type="text" class="txt t3" /> 시간
+								</td>
+							</tr>
+							<tr>
+								<th>게시판 HOT 목록수 사용여부 / 시간</th>
+								<td colspan="3">
+									<input type="radio" name="" id="" /> <label for="">설정</label>
+									<input type="radio" name="" id="" /> <label for="">해제</label>
+									<input type="text" class="txt t3" /> 시간
+								</td>
+							</tr>
+							<tr>
+								<th>파일 업로드 여부/갯수/용량</th>
+								<td colspan="3">
+									<input type="radio" name="file" value="1" id="" /> <label for="">설정</label>
+									<input type="radio" name="file" value="2" id="" /> <label for="">해제</label>
+									<input type="text" class="txt t3" /> 시간
+									<span class="ml10"><input type="text" class="txt t3" /> MB</span>
+								</td>
+							</tr>
+							<tr class="line">
+								<th>읽기 권한</th>
+								<td class="select_area">
+									<select style="width:227px">
+										<option>회원</option>
+									</select> <span class="select_next" style="padding-left:251px">이상</span>
+								</td>
+								<th>쓰기 권한</th>
+								<td class="select_area">
+									<select style="width:227px">
+										<option>회원</option>
+									</select> <span class="select_next" style="padding-left:251px">이상</span>
+								</td>
+							</tr>
+							<tr>
+								<th>답글 권한</th>
+								<td class="select_area">
+									<select style="width:227px">
+										<option>회원</option>
+									</select> <span class="select_next" style="padding-left:251px">이상</span>
+								</td>
+								<th>코멘트쓰기 권한</th>
+								<td class="select_area">
+									<select style="width:227px">
+										<option>회원</option>
+									</select> <span class="select_next" style="padding-left:251px">이상</span>
+								</td>
+							</tr>
+							<tr>
+								<th>WYSIWYG 사용 권한 </th>
+								<td colspan="3" class="select_area">
+									<select style="width:227px">
+										<option>회원</option>
+									</select> <span class="select_next" style="padding-left:251px">이상</span>
+								</td>
+							</tr>
+							<tr class="line">
+								<th>머리말</th>
+								<td colspan="3"><textarea class="txta3"></textarea></td>
+							</tr>
+							<tr>
+								<th>꼬리말</th>
+								<td colspan="3"><textarea class="txta3"></textarea></td>
+							</tr>
+							</tbody>
+						</table>
+						<script>
+							$("input").click(function(){
+								alert($(this).attr("value"))
+							});
+						</script>
+						</form>
+					</div>
+			</div>
+			<p class="btn_r">
+				<a href="" class="btn btn_box2"><b>등록하기</b></a>
+			</p>
+			<p class="btn_l">
+				<a href="" class="btn btn_box3"><b>목록으로</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,501 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<link rel="stylesheet" type="text/css" media="screen" href="jqGrid/css/jquery.ui.theme.min.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="jqGrid/css/ui.jqgrid.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="jqGrid/css/ui.multiselect.css" />
+
+<script src="jqGrid/js/jquery-ui-1.10.0.custom.js" type="text/javascript"></script>
+<script src="jqGrid/js/jquery.jqGrid.src.js" type="text/javascript"></script>
+<script src="jqGrid/js/jquery.jqGrid.min.js" type="text/javascript"></script>
+<script src="jqGrid/js/js/jquery.layout.js" type="text/javascript"></script>
+<script src="jqGrid/js/i18n/grid.locale-en.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$.jgrid.no_legacy_api = true;
+	$.jgrid.useJSON = true;
+</script>
+<script src="jqGrid/js/ui.multiselect.js" type="text/javascript"></script>
+<script src="jqGrid/js/jquery.jqGrid.js" type="text/javascript"></script>
+<script src="jqGrid/js/jquery.tablednd.js" type="text/javascript"></script>
+<script src="jqGrid/js/jquery.contextmenu.js" type="text/javascript"></script>
+<script src="jqGrid/js/jquery.searchFilter.js" type="text/javascript"></script>
+
+<style type="text/css">
+.button{width:100%;text-align:right;}
+.search{width:100%;background-color:#ffffff;border-top:2px solid #d0d0d0;margin-bottom:15px;}
+.search th{width:100px;border-bottom:1px solid #dddddd;background-color:#eeeeee;}
+.search td{text-align:left;border-bottom:1px solid #dddddd;padding:5px;}
+</style>
+
+<script type="text/javascript">
+var gnbDep = 3;		//GNB depth
+var lnbDep1 = 1;		//LNB 1depth
+var lnbDep2 = 1;		//LNB 2depth
+var lnbDep3 = 0;		//LNB 3depth
+</script>
+
+<!-- 팝업용 Style -->
+<style type="text/css">
+	.pop-layer {display:none; position: absolute; top: 50%; left: 50%; width: 810px; height:410px;  background-color:#fff; border: 5px solid #3571B5; z-index: 10;}
+	.pop-layer .pop-container {padding: 20px 25px;}
+	.pop-layer p.ctxt {color: #666; line-height: 25px;}
+	.pop-layer .btn-r {width: 100%; margin:10px 0 20px; padding-top: 0px; border-top: 0px solid #DDD; text-align:right;}
+
+	a.cbtn {display:inline-block; height:25px; padding:0 14px 0; border:1px solid #304a8a; background-color:#3f5a9d; font-size:13px; color:#fff; line-height:25px;}
+	a.cbtn:hover {border: 1px solid #091940; background-color:#1f326a; color:#fff;}
+</style>
+
+<!-- 팝업용 Script -->
+<script type="text/javascript">
+	var temp;
+	var bg;
+
+	function layer_open(el){
+
+		temp = $('#' + el);		//레이어의 id를 temp변수에 저장
+		bg = temp.prev().hasClass('bg');	//dimmed 레이어를 감지하기 위한 boolean 변수
+
+		if(bg) $('.layer').fadeIn();
+		else temp.fadeIn();	//bg 클래스가 없으면 일반레이어로 실행한다.
+
+		// 화면에 레이어를 띄운다.
+		if (temp.outerHeight() < $(window).height() ) temp.css('margin-top', '-' + temp.outerHeight()/2 + 'px');
+		else temp.css('top', '0px');
+		if (temp.outerWidth() < $(window).width() ) temp.css('margin-left', '-' + (temp.outerWidth()/2+100) + 'px');
+		else temp.css('left', '0px');
+	}
+</script>
+
+<script type="text/javascript">
+	var storeData = [
+		{id:"1",storeCd:"ST01",storeNm:"인천창고",storeDesc:"인천창고"},
+		{id:"2",storeCd:"ST02",storeNm:"청주창고",storeDesc:"청주창고"}
+	];
+
+	var storeItemData = [
+		{id:"1",storeCd:"ST01",storeNm:"인천창고",storeDesc:"인천창고"}
+	];
+
+	var itemData = [
+		{id:"1",storeCd:"ST01",storeNm:"인천창고",storeDesc:"인천창고"}
+	];
+
+
+	$(window.document).ready(function() {
+		/*****************
+		 테이블 리사이즈
+		 *****************/
+		$("#mainTable").css('width',  $(window).width()  - 315);
+		$("#mainTable").css('height', $(window).height() - 200);
+
+		/*****************
+		 창고정보 그리드 설정
+		 *****************/
+		$("#grdStore").jqGrid({
+    		data: storeData
+	        datatype: 'local',
+	        colNames:['창고코드','창고명','비고'],
+	        colModel: [
+					{name:'storeCd',   index:'STORE_CD',   align:'center', width:70,  editable:true, editrules: { required:true }, key: true},
+					{name:'storeNm',   index:'STORE_NM',   align:'left',   width:100, editable:true, editrules: { required:true }},
+					{name:'storeDesc', index:'STORE_DESC', align:'left',   width:100, editable:true}
+	            ],
+
+            rowNum: 100,
+            rowList: [100],
+            sortname: 'STORE_CD',
+            caption: '창고정보',
+            mtype: 'POST',
+            postData: {
+            	storeNmSch: $("#storeNmSch").val()
+            },
+            onSelectRow: function(sKey) {
+            	var storeNm = $('#grdStore').getCell(sKey, 'storeNm');
+            	jQuery("#grdItem").jqGrid('setCaption', storeNm + " 품목정보");
+
+            	jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew,#btnStoreCancel,#btnStoreSave").attr("disabled", false);
+        		jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete").attr("disabled", false);
+        		jQuery("#btnItemCancel,#btnItemSave").attr("disabled",true);
+        	}
+        });
+
+		/*****************
+		 품목 그리드 설정
+		 *****************/
+		$("#grdItem").jqGrid({
+    		data: storeItemData,
+	        datatype: 'local',
+	        rownumbers: false,
+    		colNames:['품목구분',  '품목코드', '품목코드', '품목번호', '품목명',   '안전재고',
+    		          '개당무게',  '단위',     '발주단위', '판매단가', '위엔화단가',
+    		          '달러단가',  '엔화단가', '위탁품',   '회계정산', '창고코드'],
+	        colModel: [
+					{name:'itemGb',     index:'ITEM_GB',     width:90,  align:"center"},
+					{name:'itemCd',     index:'ITEM_CD',     width:60,  align:"center", key: true, editable: true, hidden:true},
+					{name:'itemCdDisp', index:'ITEM_CD_DISP',width:60,  align:"center"},
+					{name:'itemNo',     index:'ITEM_NO',     width:60,  align:"center"},
+					{name:'itemNm',     index:'ITEM_NM',     width:150, align:"left"},
+					{name:'safeQty',    index:'SAFE_QTY',    width:60,  align:"right", editable:true, editrules: { required:true }},
+
+					{name:'itemWeight', index:'ITEM_WEIGHT', width:60,  align:"right"},
+					{name:'qtyGb',      index:'QTY_GB',      width:60,  align:"center"},
+					{name:'orderQty',   index:'ORDER_QTY',   width:60,  align:"right"},
+					{name:'priceKrw',   index:'PRICE_KRW',   width:90,  align:"right"},
+					{name:'priceCny',   index:'PRICE_CNY',   width:90,  align:"right"},
+
+					{name:'priceUsd',   index:'PRICE_USD',   width:90,  align:"right"},
+					{name:'priceJpy',   index:'PRICE_JPY',   width:90,  align:"right"},
+					{name:'consiYn',    index:'CONSI_YN',    width:80,  align:"center"},
+					{name:'declYn',     index:'DECL_YN',     width:80,  align:"center"},
+					{name:'storeCd',    index:'STORE_CD',    width:80,  align:"center", editable:true, hidden:true}
+	            ],
+
+            rowNum: 1000,
+            rowList: [1000],
+            sortname: 'ITEM_GB, ITEM_CD',
+            caption: '품목정보',
+            mtype: 'POST'
+        });
+
+		/*****************
+		 품목팝업 그리드 설정
+		 *****************/
+		$("#grdItemPopup").jqGrid({
+   			data: itemData,
+	        datatype: 'local',
+	        rownumbers: false,
+   			colNames:['품목구분',  '품목코드', '품목번호', '품목명',
+	   		          '개당무게',  '단위',     '발주단위', '판매단가', '위엔화단가',
+	   		          '달러단가',  '엔화단가', '위탁품',   '회계정산'],
+	        colModel: [
+					{name:'itemGb',     index:'ITEM_GB',     width:90,  align:"center"},
+					{name:'itemCd',     index:'ITEM_CD',     width:60,  align:"center"},
+					{name:'itemNo',     index:'ITEM_NO',     width:60,  align:"center"},
+					{name:'itemNm',     index:'ITEM_NM',     width:150, align:"left"},
+
+					{name:'itemWeight', index:'ITEM_WEIGHT', width:60,  align:"right"},
+					{name:'qtyGb',      index:'QTY_GB',      width:60,  align:"center"},
+					{name:'orderQty',   index:'ORDER_QTY',   width:60,  align:"right"},
+					{name:'priceKrw',   index:'PRICE_KRW',   width:90,  align:"right"},
+					{name:'priceCny',   index:'PRICE_CNY',   width:90,  align:"right"},
+
+					{name:'priceUsd',   index:'PRICE_USD',   width:90,  align:"right"},
+					{name:'priceJpy',   index:'PRICE_JPY',   width:90,  align:"right"},
+					{name:'consiYn',    index:'CONSI_YN',    width:80,  align:"center"},
+					{name:'declYn',     index:'DECL_YN',     width:80,  align:"center"}
+	            ],
+
+           rowNum: 10,
+           rowList: [10,20,30,1000],
+           width: 760,
+           height: 230,
+           pager: '#pagerItemPopup',
+           sortname: 'ITEM_GB, ITEM_CD',
+           caption: '전체품목',
+           ondblClickRow: function (rowid, iRow, iCol,e) {
+        	   $('#btnPopupSelect').trigger('click');
+           }
+		});
+
+		/*****************
+		 품목팝업 그리드 pager
+		 *****************/
+		$("#grdItemPopup").jqGrid('navGrid','#pagerItemPopup',
+   			{edit:false,add:false,del:false,search:false,refresh:true}
+   		);
+
+		/*****************
+		 그리드 리사이즈
+		 *****************/
+		$("#grdStore").setGridWidth($('#grd1TD').width(), false);
+		$("#grdItem").setGridWidth($('#grd2TD').width(), false);
+
+		$("#grdStore").setGridHeight($(window).height() - 430, false);
+		$("#grdItem").setGridHeight($(window).height() - 430, false);
+
+
+		/*****************
+		 각종 버튼 이벤트
+		 *****************/
+		// 창고조회
+		$('#btnStoreSearch').on('click', function(){
+			$("#grdItem").clearGridData();
+			jQuery("#grdStore").jqGrid('setGridParam',
+    	    		{ postData: { storeNmSch:$("#storeNmSch").val() } },
+    	            { page: 1 }
+    	    ).trigger('reloadGrid');
+    	});
+
+		// 창고신규
+		$('#btnStoreNew').on('click', function(){
+			curRow = $("#grdStore").getGridParam("reccount") + 1;
+
+			jQuery("#grdStore").jqGrid('addRowData', curRow, "last");
+			jQuery("#grdStore").jqGrid('setRowData', curRow);
+
+			jQuery("#grdStore").setSelection(curRow);
+			jQuery("#grdStore").jqGrid('editRow', curRow);
+
+			jQuery("#grdStore").jqGrid('setGridParam',
+    	    		{ postData: { oper1:"add" } }
+    	    );
+
+			jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew").attr("disabled", true);
+			jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete,#btnItemSave,#btnItemCancel").attr("disabled", true);
+    		jQuery("#btnStoreCancel,#btnStoreSave").attr("disabled",false);
+    	});
+
+		// 창고수정
+		jQuery("#btnStoreEdit").click( function() {
+    		var id = jQuery("#grdStore").jqGrid('getGridParam','selrow');
+    		if (id)	{
+				curRow = id;
+				jQuery("#grdStore").jqGrid('editRow', curRow);
+	    		this.disabled = 'true';
+
+	    		jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew").attr("disabled", true);
+	    		jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete,#btnItemSave,#btnItemCancel").attr("disabled", true);
+	    		jQuery("#btnStoreCancel,#btnStoreSave").attr("disabled",false);
+    		} else {
+    			alert("수정할 창고를 선택하세요.");
+    		}
+    	});
+
+		// 창고삭제
+		jQuery("#btnStoreDelete").click( function() {
+    		var id = jQuery("#grdStore").jqGrid('getGridParam','selrow');
+    		if (id)	{
+    			var ret = jQuery("#grdStore").jqGrid('getRowData',id);
+
+    			jQuery("#grdStore").jqGrid('delGridRow', id, {"delData": {storeCd:ret.storeCd }});
+    		} else {
+    			alert("삭제할 창고를 선택하세요.");
+    		}
+    	});
+
+		// 창고저장
+		jQuery("#btnStoreSave").click( function() {
+			var rslt = jQuery("#grdStore").jqGrid('saveRow', curRow);
+
+			if(rslt) {
+				jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew").attr("disabled", false);
+				jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete,#btnItemSave,#btnItemCancel").attr("disabled", false);
+	    		jQuery("#btnStoreCancel,#btnStoreSave").attr("disabled",true);
+			}
+		});
+
+		// 창고취소
+		jQuery("#btnStoreCancel").click( function() {
+    		jQuery("#grdStore").jqGrid().trigger('reloadGrid');
+
+    		jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew").attr("disabled", false);
+    		jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete,#btnItemSave,#btnItemCancel").attr("disabled", false);
+    		jQuery("#btnStoreCancel,#btnStoreSave").attr("disabled",true);
+    	});
+
+		// 품목추가
+		jQuery("#btnItemAdd").click( function() {
+			var tmpRow = jQuery("#grdStore").jqGrid('getGridParam','selrow');
+
+			if(tmpRow) layer_open('itemPopup');
+			else alert("창고를 먼저 선택하세요!");
+    	});
+
+
+		// 품목수정
+		jQuery("#btnItemEdit").click( function() {
+    		var id = jQuery("#grdItem").jqGrid('getGridParam','selrow');
+    		if (id)	{
+				curRow = id;
+				jQuery("#grdItem").jqGrid('editRow', curRow);
+	    		this.disabled = 'true';
+
+	    		jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew,#btnStoreCancel,#btnStoreSave").attr("disabled", true);
+	    		jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete").attr("disabled", true);
+	    		jQuery("#btnItemCancel,#btnItemSave").attr("disabled", false);
+    		} else {
+    			alert("수정할 품목을 선택하세요.");
+    		}
+    	});
+
+		// 품목제거
+		jQuery("#btnItemDelete").click( function() {
+    		var id = jQuery("#grdItem").jqGrid('getGridParam','selrow');
+    		if (id)	{
+    			var ret = jQuery("#grdItem").jqGrid('getRowData',id);
+
+    			jQuery("#grdItem").jqGrid('delGridRow', id, {"delData": {storeCd:ret.storeCd, itemCd:ret.itemCd }});
+    		} else {
+    			alert("삭제할 품목을 선택하세요.");
+    		}
+    	});
+
+		// 품목저장
+		jQuery("#btnItemSave").click( function() {
+			var sRow = jQuery("#grdItem").jqGrid('getGridParam','selrow');
+			var rslt = jQuery("#grdItem").jqGrid('saveRow', sRow);
+
+			if(rslt) {
+				jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew,#btnStoreCancel,#btnStoreSave").attr("disabled", false);
+				jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete").attr("disabled", false);
+	    		jQuery("#btnItemCancel,#btnItemSave").attr("disabled",true);
+			}
+		});
+
+		// 품목취소
+		jQuery("#btnItemCancel").click( function() {
+    		jQuery("#grdItem").jqGrid().trigger('reloadGrid');
+
+    		jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew,#btnStoreCancel,#btnStoreSave").attr("disabled", false);
+    		jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete").attr("disabled", false);
+    		jQuery("#btnItemCancel,#btnItemSave").attr("disabled",true);
+    	});
+
+		// 품목 선택 버튼(popup)
+		jQuery("#btnPopupSelect").click( function() {
+			var iRow = jQuery("#grdItemPopup").jqGrid('getGridParam','selrow');
+
+			if(iRow) {
+				var sRow = jQuery("#grdStore").jqGrid('getGridParam','selrow');
+				var sRet = jQuery("#grdStore").jqGrid('getRowData', sRow);
+				var sStoreCd = sRet.storeCd;
+
+				var iRet = jQuery("#grdItemPopup").jqGrid('getRowData', iRow);
+
+				var nRow = jQuery("#grdItem").jqGrid('getGridParam', 'reccount') + 1;
+
+				jQuery("#grdItem").jqGrid('addRowData', nRow, "last");
+				jQuery("#grdItem").jqGrid('setRowData', nRow, iRet);
+				jQuery("#grdItem").jqGrid('setRowData', nRow, {storeCd:sStoreCd, itemCdDisp:iRet.itemCd, safeQty:0});
+
+				jQuery("#grdItem").setSelection(nRow);
+				jQuery("#grdItem").jqGrid('editRow', nRow);
+
+				jQuery("#btnStoreSearch,#btnStoreEdit,#btnStoreDelete,#btnStoreNew,#btnStoreCancel,#btnStoreSave").attr("disabled", true);
+	    		jQuery("#btnItemAdd,#btnItemEdit,#btnItemDelete").attr("disabled", true);
+	    		jQuery("#btnItemCancel,#btnItemSave").attr("disabled", false);
+
+				if(bg) $('.layer').fadeOut(); else temp.fadeOut();
+			} else {
+				alert("품목을 선택하세요!");
+			}
+		});
+
+		// 품목 취소 버튼(popup)
+		jQuery("#btnPopupCancel").click( function() {
+			if(bg) $('.layer').fadeOut(); else temp.fadeOut();
+		});
+	});
+
+
+	/********************
+	 화면크기 변경 이벤트
+	 ********************/
+	$(window).resize(function(){
+		var width  = $(window).width()  - 315;
+		var height = $(window).height() - 220;
+
+		$("#mainTable").css('width',  width);
+		$("#mainTable").css('height', height);
+
+		$("#grdStore").setGridWidth($('#grd1TD').width(), false);
+		$("#grdItem").setGridWidth($('#grd2TD').width(), false);
+
+		$("#grdStore").setGridHeight($(window).height() - 430, false);
+		$("#grdItem").setGridHeight($(window).height() - 430, false);
+	}).resize();
+</script>
+
+<h2>창고관리</h2>
+
+<table id="mainTable" >
+	<colgroup><col width="30%" /><col width="10" /><col width="*" /></colgroup>
+	<tbody>
+		<tr valign="top">
+			<td colspan="3">
+				<form id="frm" name="frm" method="post" action="">
+				<div class="box board_write mt20">
+				<p class="bg"></p>
+				<table class="writeTable">
+					<colgroup><col width="8%" /><col width="*" /></colgroup>
+					<tbody>
+					<tr>
+						<th>창고명</th>
+						<td colspan="3">
+							<input id="storeNmSch" name="storeNmSch" type="text" class="txt t4" style="width:100px" />
+						</td>
+					</tr>
+					</tbody>
+				</table>
+				</div>
+				</form>
+			</td>
+		</tr>
+		<tr valign="top">
+			<td>
+				<table width="100%" height="100%" >
+					<tr>
+						<td height="30" align="right">
+							<input type="button" id="btnStoreSearch" value="조회" />
+							<input type="button" id="btnStoreNew"    value="신규" />
+							<input type="button" id="btnStoreEdit"   value="수정" />
+							<input type="button" id="btnStoreDelete" value="삭제" />
+							<input type="button" id="btnStoreSave"   value="저장" disabled="true" />
+							<input type="button" id="btnStoreCancel" value="취소" disabled="true" />
+						</td>
+					</tr>
+					<tr>
+						<td id="grd1TD" valign="top">
+							<table id="grdStore"></table>
+						</td>
+					</tr>
+				</table>
+			</td>
+			<td>
+			&nbsp;
+			</td>
+			<td>
+				<table width="100%" height="100%" >
+					<tr>
+						<td height="30" align="right">
+							<input type="button" id="btnItemAdd"    value="품목추가" />
+							<input type="button" id="btnItemEdit"   value="품목수정" />
+							<input type="button" id="btnItemDelete" value="품목제거" />
+							<input type="button" id="btnItemSave"   value="품목저장" disabled="true" />
+							<input type="button" id="btnItemCancel" value="품목취소" disabled="true" />
+						</td>
+					</tr>
+					<tr>
+						<td id="grd2TD" valign="top">
+							<table id="grdItem"></table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div id="itemPopup" class="pop-layer">
+	<div class="pop-container">
+		<div class="pop-conts">
+			<!--content //-->
+			<p class="ctxt mb20"><h2>품목 선택</h2></p>
+			<p class="ctxt mb20">
+				<table id="grdItemPopup"></table>
+				<div id="pagerItemPopup"></div>
+			</p>
+			<div class="btn-r">
+				<a href="#" id="btnPopupSelect" class="cbtn">선택</a>
+				<a href="#" id="btnPopupCancel" class="cbtn">취소</a>
+			</div>
+			<!--// content-->
+		</div>
+	</div>
+</div>
+
+	</article>
+</section>
+
+</body>
+</html>

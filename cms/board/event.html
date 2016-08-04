@@ -1,0 +1,209 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 3;		//LNB 1depth
+var lnbDep2 = 3;		//LNB 2depth
+var lnbDep3 = 4;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>이벤트<span>목록</span></h2>
+			<fieldset class="search_box">
+				<span>검색구분</span>
+				<ul>
+					<li>옵션1</li>
+					<li>옵션2</li>
+					<li>옵션3</li>
+				</ul><input type="text" id="" value="검색어를 입력해주세요." onfocus="this.value=''" class="input5" />
+				<input type="text" id="" value="날짜 선택" onfocus="this.value=''" class="input4" /> <b class="txt">~</b>
+				<input type="text" id="" value="날짜 선택" onfocus="this.value=''" class="input4" />
+				<a href="" class="btn btn_box4"><b>검색하기</b></a>
+			</fieldset>
+			<div class="listTableWrap">
+				<form>
+				<table class="listTable hoverTable">
+					<colgroup><col width="5%" /><col width="5%" /><col width="*" /><col width="14%" /><col width="14%" /><col width="7%" /><col width="7%" /></colgroup>
+					<thead>
+					<tr>
+						<th>선택</th>
+						<th>번호</th>
+						<th>제목</th>
+						<th>진행기간</th>
+						<th>등록일</th>
+						<th>작성자</th>
+						<th>조회수</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">이스타항공, 말레이시아 관광청과 함께 사상 최대 경품 이벤트 진행!</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" title="선택" /></td>
+						<td class="f12">100</td>
+						<td class="al"><a href="">트위터 팔로워 1만명 돌파, 가정의 달 포토이벤트 진행 트위터 팔로워 가정의 달 포토이벤트 진행</a></td>
+						<td class="f12 point_green">2014.05.29 ~ 2014.05.29</td>
+						<td class="f12">2014.05.29 / 10:15:35</td>
+						<td>홍길동</td>
+						<td class="f12">5005</td>
+					</tr>
+					</tbody>
+				</table>
+				</form>
+				<p class="bg"></p>
+			</div>
+			<p class="pagination">
+				<a href=""><img src="/img/common/paging1.png" alt="처음" /></a>
+				<a href=""><img src="/img/common/paging2.png" alt="이전" /></a>
+				<span>
+					<a href="" class="on">1</a>
+					<a href="">2</a>
+					<a href="">3</a>
+					<a href="">4</a>
+					<a href="">5</a>
+					<a href="">6</a>
+					<a href="">7</a>
+					<a href="">8</a>
+					<a href="">9</a>
+					<a href="">10</a>
+				</span>
+				<a href=""><img src="/img/common/paging3.png" alt="다음" /></a>
+				<a href=""><img src="/img/common/paging4.png" alt="마지막" /></a>
+			</p>
+			<p class="total_page">PAGE : <b>1</b>/100</p>
+			<p class="btn_r">
+				<a href="" class="btn btn_box1"><b>삭제하기</b></a>
+				<a href="" class="btn btn_box2"><b>등록하기</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>

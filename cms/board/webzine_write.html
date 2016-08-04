@@ -1,0 +1,78 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 3;		//LNB 1depth
+var lnbDep2 = 4;		//LNB 2depth
+var lnbDep3 = 1;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>E-Webzine<span>등록</span></h2>
+			<div class="box board_write">
+				<p class="bg"></p>
+				<div>
+					<form>
+					<table class="writeTable">
+						<colgroup><col width="6%" /><col width="*" /></colgroup>
+						<tbody>
+						<tr>
+							<th>제목</th>
+							<td><input type="text" class="txt t6" /></td>
+						</tr>
+						<tr>
+							<th>작성자</th>
+							<td><input type="text" class="txt t1" /></td>
+						</tr>
+						<tr>
+							<th>썸네일</th>
+							<td>
+								<input type="tel" class="txt file2" />
+								<a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />찾아보기</b></a>
+								<span class="prefer_red ml10">가로:140px / 세로:175px</span>
+							</td>
+						</tr>
+						<tr>
+							<th>URL</th>
+							<td><input type="text" class="txt t6" /></td>
+						</tr>
+						<tr>
+							<th>내용 삽입</th>
+							<td>----에디터위치----</td>
+						</tr>
+						<tr>
+							<th>첨부파일</th>
+							<td>
+								<input type="tel" class="txt file2" />
+								<a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />찾아보기</b></a>
+								<p>
+									<input type="tel" class="txt file2" />
+									<a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />찾아보기</b></a>
+								</p>
+								<p>
+									<input type="tel" class="txt file2" />
+									<a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />찾아보기</b></a>
+								</p>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					</form>
+				</div>
+			</div>
+			<p class="btn_r">
+				<a href="" class="btn btn_box1"><b>취소하기</b></a>
+				<a href="" class="btn btn_box2"><b>수정하기</b></a>
+				<a href="" class="btn btn_box2"><b>등록하기</b></a>
+			</p>
+			<p class="btn_l">
+				<a href="" class="btn btn_box3"><b>목록으로</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>

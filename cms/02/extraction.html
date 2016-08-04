@@ -1,0 +1,100 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 5;		//LNB 1depth
+var lnbDep2 = 2;		//LNB 2depth
+var lnbDep3 = 0;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>DOCUMENT EXTRACTION</h2>
+			<form>
+			<div class="box board_write mt20">
+				<p class="bg"></p>
+				<div>
+					<table class="writeTable">
+							<colgroup><col width="7%" /><col width="27%" /><col width="4%" /><col width="27%" /><col width="6%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>Source</th>
+								<td colspan="5">
+									<select style="width:227px">
+										<option>NEWS</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>Query</th>
+								<td><input type="text" class="txt t5" /></td>
+								<th>Field</th>
+								<td>
+									<select style="width:227px">
+										<option>TMS_RAW_STREAM</option>
+									</select>
+								</td>
+								<th>Analyzer </th>
+								<td>
+									<select style="width:227px">
+										<option>TOPIC</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>From</th>
+								<td><input type="text" class="txt t5" /></td>
+								<th>To</th>
+								<td colspan="3"><input type="text" class="txt t5" /></td>
+							</tr>
+							<tr>
+								<th>Return Field</th>
+								<td colspan="5">
+									<input type="checkbox" name="" id="" /> <label for="">DATE</label>
+									<input type="checkbox" name="" id="" /> <label for="">TIME</label>
+									<input type="checkbox" name="" id="" /> <label for="">AUTHOR</label>
+									<input type="checkbox" name="" id="" /> <label for="">TITLE</label>
+									<input type="checkbox" name="" id="" /> <label for="">CONTENT</label>
+									<input type="checkbox" name="" id="" /> <label for="">GEO</label>
+								</td>
+							</tr>
+							<tr>
+								<th>Sort Field</th>
+								<td colspan="5" class="select_area">
+									<select style="width:227px">
+										<option>DATA&TIME</option>
+									</select>
+									<span class="select_next" style="padding-left:261px">
+										<input type="radio" name="" id="" /> <label for="">Asc</label>
+										<input type="radio" name="" id="" /> <label for="">Desc</label>
+									</span>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="6" class="nobg">
+									<input type="radio" name="" id="" /> <label for="">No Remove</label>
+									<input type="radio" name="" id="" /> <label for="">Remove(exactly match)</label>
+									<input type="radio" name="" id="" /> <label for="">Bar Chart</label>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+				</div>
+			</div>
+			</form>
+			<p class="btn_c">
+				<a href="" class="btn btn_box2"><b>GET DOCUMENT</b></a>
+			</p>
+			<div class="box board_write mt20">
+				<p class="bg"></p>
+				<div>
+					결과값 출력위치
+				</div>
+			</div>
+	</article>
+</section>
+
+</body>
+</html>

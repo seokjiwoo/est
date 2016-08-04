@@ -1,0 +1,39 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 3;		//LNB 1depth
+var lnbDep2 = 1;		//LNB 2depth
+var lnbDep3 = 3;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>게시판 불량단어 등록</h2>
+			<div class="box board_write">
+				<p class="bg"></p>
+				<div>
+					<form>
+					<table class="writeTable">
+						<colgroup><col width="6%" /><col width="*" /></colgroup>
+						<tbody>
+						<tr>
+							<th>불량단어</th>
+							<td><textarea class="txta4"></textarea></td>
+						</tr>
+						</tbody>
+					</table>
+					</form>
+				</div>
+			</div>
+			<p class="btn_c">
+				<a href="" class="btn btn_box1"><b>취소하기</b></a>
+				<a href="" class="btn btn_box2"><b>등록하기</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>

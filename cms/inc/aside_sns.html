@@ -1,0 +1,135 @@
+			<div id="aside">
+					
+					<!--SNS Panel-->
+					<div id="snsPanel">
+						<h4>이스타항공</h4>
+							<div id="panelListWrap">
+								<div id="panelList">
+									<ul>
+										<li><a href="#"><img src="/img/sns/icon_sns1.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns2.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns3.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns4.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns5.png" alt="" /></a></li>
+									</ul>
+									<ul>
+										<li><a href="#"><img src="/img/sns/icon_sns4.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns3.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns2.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns5.png" alt="" /></a></li>
+										<li><a href="#"><img src="/img/sns/icon_sns1.png" alt="" /></a></li>
+									</ul>
+								</div>
+								<input type="image" src="/img/sns/sns_prev.png" alt="" title="이전" id="panel_prev" />
+								<input type="image" src="/img/sns/sns_next.png" alt="" title="다음" id="panel_next" />
+							</div>
+							<div id="" class="panelEffect ef0"><!--클래스명 ef0 ef1 ef2 ef3 ef4-->
+								<h5>by Google</h5>
+									<p>
+										P.1
+										<input type="image" src="/img/sns/sns_prev.png" alt="" title="이전페이지"/>
+										<input type="image" src="/img/sns/sns_next.png" alt="" title="다음페이지" />
+									</p>
+									<ul>
+										<li>검색 자료를 찾을 수 없습니다.</li>
+										<li><a href="">이스타항공 - 잡코리아</a>이스타항공은 2007년에 설립된 회사로 자본금 258억, 매출액 2,541 억원, 사원수 600명 규모의 중견기업입니다. 서울 강서구 방화2동에 위치하고 있으며, 항공운송업 ..<span>www.jobkorea.co.kr</span></li>
+										<li><a href="">이스타젯 항공편</a>이스타항공은 2007년에 설립된 회사로 자본금 258억, 매출액 2,541 억원, 사원수 600명 규모의 중견기업입니다. 서울 강서구 방화2동에 위치하고 있으며, 항공운송업 ..<span>www.jobkorea.co.kr</span></li>
+										<li><a href="">이스타항공 - 잡코리아</a>이스타항공은 2007년에 설립된 회사로 자본금 258억, 매출액 2,541 억원, 사원수 600명 규모의 중견기업입니다. 서울 강서구 방화2동에 위치하고 있으며, 항공운송업 ..<span>www.jobkorea.co.kr</span></li>
+									</ul>
+							</div>
+							<script>
+								$('#panelList').cycle({
+										fx:     'scrollHorz',
+										prev:   '#panel_prev',
+										next:   '#panel_next',
+										speed:  '800',
+										timeout: 0
+								});
+								$('#panelList li a').on('click',function (e) {
+									e.preventDefault();
+									var c = 'panelEffect'+' ef'+$(this).parent("li").index();
+									$("#snsPanel .panelEffect").removeClass().addClass(c);									
+								});
+							</script>
+					</div>
+
+					<!--Smart Warp-->
+					<div id="smartWarp">
+						<h4>Smart Warp</h4>
+							<ul>
+								<li><a href="#effect_news" class="news">뉴스</a></li>
+								<li><a href="#effect_blog" class="blog">블로그</a></li>
+								<li><a href="#effect_twitter" class="twitter">트위터</a></li>
+								<li><a href="#effect_web" class="web">웹</a></li>
+							</ul>
+							<script>
+								$("#smartWarp a").click(function(){
+									var $wrap = $("html, body");
+									var section = $(this).attr("href");
+									var sectionPosition = $(section).position();
+									var scrollPosition = sectionPosition.top+200;
+									$wrap.animate({scrollTop:scrollPosition},300);
+									return false;
+								});
+							</script>
+					</div>
+
+					<!--문서량 트랜드-->
+					<div id="documentTrend">
+						<h4>문서량 트랜드</h4>
+							<div>
+								--그래프위치--
+							</div>
+					</div>
+
+					<!--최근 검색어-->
+					<div id="latelyWord">
+						<h4>최근 검색어</h4>
+							<ul class="word_list">
+								<li><b>1</b><a href="">이스타항공</a></li>
+								<li><b>2</b><a href="">여행</a></li>
+								<li><b>3</b><a href="">항공사</a></li>
+								<li><b>4</b><a href="">이스타</a></li>
+								<li><b>5</b><a href="">저가항공</a></li>
+							</ul>
+					</div>
+
+					<!--인기 검색어-->
+					<div id="popularityWord">
+						<h4>인기 검색어</h4>
+							<dl>
+								<dt>기간선택</dt>
+								<dd><a href="#day" class="on">일간</a></dd>
+								<dd><a href="#week">주간</a></dd>
+								<dd><a href="#month">월간</a></dd>
+							</dl>
+							<ul id="day" class="word_list">
+								<li><b>1</b><a href="">이스타항공</a></li>
+								<li><b>2</b><a href="">여행</a></li>
+								<li><b>3</b><a href="">항공사</a></li>
+								<li><b>4</b><a href="">이스타</a></li>
+								<li><b>5</b><a href="">저가항공</a></li>
+							</ul>
+							<ul id="week" class="word_list">
+								<li><b>1</b><a href="">여행</a></li>
+								<li><b>2</b><a href="">이스타항공</a></li>
+								<li><b>3</b><a href="">항공사</a></li>
+								<li><b>4</b><a href="">이스타</a></li>
+								<li><b>5</b><a href="">저가항공</a></li>
+							</ul>
+							<ul id="month" class="word_list">
+								<li><b>1</b><a href="">저가항공</a></li>
+								<li><b>2</b><a href="">이스타</a></li>
+							</ul>
+							<script>
+								$("#popularityWord dl dd a").click(function(){
+									$($(this).attr("href")).fadeIn(300);
+									$(this).addClass("on");
+									$("#popularityWord ul").not($(this).attr("href")).fadeOut(0);
+									$("#popularityWord dl dd a").not(this).removeClass("on");
+									return false;
+								});
+							</script>
+					</div>
+
+				</div>

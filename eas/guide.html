@@ -1,0 +1,219 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>css 가이드</title>
+	<link rel="stylesheet" href="./css/import.css">
+	<script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</head>
+<body style="padding-bottom:100px;">
+	<h2 class="tac">버튼</h2>
+	<div class="mt10">
+		<a href="#" class="ss_btn green fff w68">h24</a>
+		<a href="#" class="ss_btn red fff w68">h24</a>
+		<a href="#" class="ss_btn white w68 bdr1">h24</a>
+		<a href="#" class="ss_btn gray fff w68">h24</a>
+		<a href="#" class="ss_btn navy fff w68">h24</a>
+	</div>
+	<div class="mt30">
+		<a href="#" class="s_btn green fff w68">h28</a>
+		<a href="#" class="s_btn red fff w68">h28</a>
+		<a href="#" class="s_btn white w68">h28</a>
+		<a href="#" class="s_btn gray fff w68">h28</a>
+		<a href="#" class="s_btn navy fff w68">h28</a>
+	</div>
+	<div class="mt30">
+		<a href="#" class="l_btn2 green fff">h32</a>
+		<a href="#" class="l_btn2 red fff">h32</a>
+		<a href="#" class="l_btn2 white f00">h32</a>
+		<a href="#" class="l_btn2 gray fff">h32</a>
+		<a href="#" class="l_btn2 navy fff">h32</a>
+	</div>
+	<div class="mt30">
+		<a href="#" class="l_btn green fff">h35</a>
+		<a href="#" class="l_btn red fff">h35</a>
+		<a href="#" class="l_btn white f00">h35</a>
+		<a href="#" class="l_btn gray fff">h35</a>
+		<a href="#" class="l_btn navy fff">h35</a>
+	</div>
+	<div class="mt30 tac">
+		<a href="#" class="loginbtn">로그인</a>
+	</div>
+	<div class="mt30">
+		<span class="next_btn"><a href="#">위 사항을 숙지하였으며, 예약을 진행합니다.</a></span>
+		<span class="reserved"><a href="#">위 사항을 숙지하였으며, 예약을 진행합니다.</a></span>
+		<span class="cancel"><a href="#">최소</a></span>
+		<span class="detail"><a href="#">운임상세보기</a></span>
+		<a href="#" class="searchid_btn white"><span>아이디 찾기</span></a>
+		<a href="#" class="searchpw_btn white"><span>비밀번호 찾기</span></a>
+	</div>
+	<h2 class="mt30 tac">인풋</h2>
+	<div class="mt10">
+		<span class="b_input"><input type="text" class="in_text" /></span>
+		<span class="s_input">
+			<input type="text" class="in_text" />
+			<button class="search_btn"><span class="sel"></span></button>
+		</span>
+		<span class="cal_input">
+			<input type="text" class="in_text" />
+			<!-- <button class="search_btn"><span class="sel"></span></button> -->
+		</span>
+		<span class="log_input tx">
+			<input type="text" class="in_text" />
+		</span>
+		<span class="log_input pw">
+			<input type="password" class="in_text" />
+		</span>
+		<span class="b_area">
+			<textarea maxlength="40" class="in_area">400자까지 입력이 가능합니다. 댓글을 등록해주세요.</textarea>
+		</span>
+	</div>
+	<div class="mt30">
+		<ul class="radio_set">
+			<li>
+				<input type="radio" name="sel" id="sel1" class="rdo" />
+				<label for="sel1">왕복</label>
+			</li>
+			<li>
+				<input type="radio" name="sel" id="sel2" class="rdo" />
+				<label for="sel2">편도</label>
+			</li>
+		</ul>
+		<ul class="chk_set">
+			<li>
+				<input type="checkbox" id="ch1" class="chk" />
+				<label for="ch1">왕복</label>
+			</li>
+			<li>
+				<input type="checkbox" id="ch2" class="chk" />
+				<label for="ch2">편도</label>
+			</li>
+		</ul>
+		<span class="b_select">
+			<select class="sel">
+				<option>제목+내용</option>
+			</select>
+		</span>
+
+		<span class="seatcheck">
+			<input type="checkbox" id="seat1" class="seat_ckbox blind" />
+			<label for="seat1" class="s_red">2A</label>
+		</span>
+		<span class="seatcheck">
+			<input type="checkbox" id="seat2" class="seat_ckbox blind" />
+			<label for="seat2" class="s_green">2A</label>
+		</span>
+		<span class="seatcheck">
+			<input type="checkbox" id="seat3" class="seat_ckbox blind" />
+			<label for="seat3" class="s_yellow">2A</label>
+		</span>
+		<span class="xbox"></span>
+
+		<span class="sbox r_box"></span>
+		<span class="sbox g_box"></span>
+		<span class="sbox y_box"></span>
+		<span class="sbox x_box"></span>
+
+	</div>
+	<h2 class="mt30 tac">컨텐츠</h2>
+	<div class="mt10">
+		<ul class="tab_menu mt10">
+			<li><a href="#">전체</a></li>
+			<li class="on"><a href="#">예매</a></li>
+			<li><a href="#">공항서비스</a></li>
+			<li><a href="#">수하물</a></li>
+			<li><a href="#">홈페이지</a></li>
+			<li><a href="#">특수고객</a></li>
+			<li><a href="#">기타</a></li>
+			<li><a href="#">기내</a></li>
+		</ul>
+	</div>
+	<div class="mt30">
+		<div class="tables1 mt10">
+			<table summary="">
+				<caption></caption>
+				<colgrpup>
+					<col width="20%" />
+					<col width="40%" />
+					<col width="40%" />
+				</colgrpup>
+				<thead>
+					<tr>
+						<th>기준</th>
+						<th>국내선</th>
+						<th>국제선</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>무게</td>
+						<td>15Kg</td>
+						<td>15Kg</td>
+					</tr>
+					<tr>
+						<td>용적</td>
+						<td>
+							가로, 세로,<br />
+							높이의 합이<br />
+							203cm 이하
+						</td>
+						<td>
+							가로, 세로,
+							높이의 합이
+							203cm 이하
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="tables2 mt10">
+			<table summary="">
+				<caption></caption>
+				<colgrpup>
+					<col width="20%" />
+					<col width="40%" />
+					<col width="40%" />
+				</colgrpup>
+				<thead>
+					<tr>
+						<th>기준</th>
+						<th>국내선</th>
+						<th>국제선</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>무게</td>
+						<td>15Kg</td>
+						<td>15Kg</td>
+					</tr>
+					<tr>
+						<td>용적</td>
+						<td>
+							가로, 세로,<br />
+							높이의 합이<br />
+							203cm 이하
+						</td>
+						<td>
+							가로, 세로,
+							높이의 합이
+							203cm 이하
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="paging">
+			<a href="#" class="p-prev"><img src="./images/btn/pprev_btn.png" alt="" /></a>
+			<a href="#" class="prev"><img src="./images/btn/prev_btn.png" alt="" /></a>
+			<span class="count"><strong>1</strong> / 100</span>
+			<a href="#" class="next"><img src="./images/btn/next_btn.png" alt="" /></a>
+			<a href="#" class="n-next"><img src="./images/btn/nnext_btn.png" alt="" /></a>
+		</div>
+	</div>
+
+</body>
+</html>

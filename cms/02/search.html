@@ -1,0 +1,84 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 5;		//LNB 1depth
+var lnbDep2 = 1;		//LNB 2depth
+var lnbDep3 = 0;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>SEARCH STATISTICS</h2>
+			<form>
+			<div class="box">
+				<h3>
+					<input type="radio" name="multiple" id="multiple1" checked /> <label for="multiple1" class="checked">Multiple Queries</label>
+					<input type="radio" name="multiple" id="multiple2" /> <label for="multiple2">Multiple Sources</label>
+				</h3>
+				<div>
+					<table class="writeTable">
+							<colgroup><col width="6%" /><col width="20%" /><col width="4%" /><col width="20%" /><col width="7%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>Query 1</th>
+								<td colspan="5">
+									<input type="text" class="txt t7" value="검색어를 입력해 주세요." onfocus="this.value=''" />
+									<span class="ml10"><input type="checkbox" name="" id="" /> <label for="">News</label></span>
+								</td>
+							</tr>
+							<tr>
+								<th>Query 2</th>
+								<td colspan="5">
+									<input type="text" class="txt t7" value="검색어를 입력해 주세요." onfocus="this.value=''" />
+									<span class="ml10"><input type="checkbox" name="" id="" /> <label for="">Blog</label></span>
+								</td>
+							</tr>
+							<tr>
+								<th>Query 3</th>
+								<td colspan="5">
+									<input type="text" class="txt t7" value="검색어를 입력해 주세요." onfocus="this.value=''" />
+									<span class="ml10"><input type="checkbox" name="" id="" /> <label for="">Twitter</label></span>
+								</td>
+							</tr>
+							<tr>
+								<th>From</th>
+								<td><input type="text" class="txt t1" /></td>
+								<th>To</th>
+								<td><input type="text" class="txt t1" /></td>
+								<th>Time unit</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">Day</label>
+									<input type="radio" name="" id="" /> <label for="">Week</label>
+									<input type="radio" name="" id="" /> <label for="">Month</label>
+								</td>
+							</tr>
+							<tr>
+								<th>Chart</th>
+								<td colspan="5">
+									<input type="radio" name="" id="" /> <label for="">Line Chart</label>
+									<input type="radio" name="" id="" /> <label for="">Column Chart</label>
+									<input type="radio" name="" id="" /> <label for="">Bar Chart</label>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+				</div>
+			</div>
+			</form>
+			<p class="btn_c">
+				<a href="" class="btn btn_box2"><b>GET STATISTICS</b></a>
+			</p>
+			<div class="box board_write mt20">
+				<p class="bg"></p>
+				<div>
+					결과값 출력위치
+				</div>
+			</div>
+	</article>
+</section>
+
+</body>
+</html>

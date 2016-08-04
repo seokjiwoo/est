@@ -1,0 +1,104 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 3;		//LNB 1depth
+var lnbDep2 = 1;		//LNB 2depth
+var lnbDep3 = 2;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>버튼 및 탭 스타일<span>가이드</span></h2>
+			<div class="box">
+				<h3>텍스트버튼</h3>
+					<div>
+						<p>
+							<a href="" class="btn btn_box1"><b>목록으로</b></a>
+							<a href="" class="btn btn_box2"><b>삭제하기</b></a>
+							<a href="" class="btn btn_box3"><b>등록하기</b></a>
+							<a href="" class="btn btn_box1 excel"><b><img src="/img/common/icon_excell.png" alt="" />엑셀다운로드</b></a>
+						</p>
+						<p>
+							<a href="" class="btn btn_box4"><b>검색하기</b></a>
+							<a href="" class="btn btn_box5"><b>검색하기</b></a>
+							<a href="" class="btn btn_box5 apply"><b><img src="/img/common/icon_apply.png" alt="" />등록하기</b></a>
+						</p>
+						<p>
+							<a href="" class="btn btn_board1"><b>기본레드버튼</b></a>
+							<a href="" class="btn btn_board2"><b>기본블랙버튼</b></a>
+							<a href="" class="btn btn_board1 reset"><b><img src="/img/common/icon_reset.png" alt="" />비밀번호초기화</b></a>
+							<a href="" class="btn btn_board2 search"><b><img src="/img/common/icon_search.png" alt="" />찾아보기</b></a>
+						</p>
+						<p>
+							<a href="" class="btn btn_board3"><b>기본화이트버튼</b></a>
+							<a href="" class="btn btn_board3 add"><b>인트로 이미지 추가<img src="/img/common/icon_add.png" alt="" /></b></a>
+						</p>
+						<p>
+							<a href="" class="btn btn_table_modifi">수정</a>
+							<a href="" class="btn btn_table_del">삭제</a>
+						</p>
+					</div>
+			</div>
+			<ul id="tabMenu">
+				<li><a href="" class="on">메뉴</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">메뉴</a></li>
+				<li><a href="">메뉴</a></li>
+			</ul>
+			<div class="listTableWrap">
+				<table class="listTable">
+					<colgroup><col width="10%" /><col width="*" /></colgroup>
+					<thead>
+					<tr>
+						<th>번호</th>
+						<th>제목</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>10</td>
+						<td class="al">샘플입니다.</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td class="al">샘플입니다.</td>
+					</tr>
+					</tbody>
+				</table>
+				<p class="bg"></p>
+			</div>
+			<p class="pagination">
+				<a href=""><img src="/img/common/paging1.png" alt="처음" /></a>
+				<a href=""><img src="/img/common/paging2.png" alt="이전" /></a>
+				<span>
+					<a href="" class="on">1</a>
+					<a href="">2</a>
+					<a href="">3</a>
+					<a href="">4</a>
+					<a href="">5</a>
+					<a href="">6</a>
+					<a href="">7</a>
+					<a href="">8</a>
+					<a href="">9</a>
+					<a href="">10</a>
+				</span>
+				<a href=""><img src="/img/common/paging3.png" alt="다음" /></a>
+				<a href=""><img src="/img/common/paging4.png" alt="마지막" /></a>
+			</p>
+			<p class="total_page">PAGE : <b>1</b>/100</p>
+			<p class="btn_r">
+				<a href="" class="btn btn_box1"><b>삭제하기</b></a>
+				<a href="" class="btn btn_box2"><b>등록하기</b></a>
+			</p>
+			<p class="btn_l"><a href="" class="btn btn_box3"><b>목록으로</b></a></p>
+	</article>
+</section>
+
+</body>
+</html>

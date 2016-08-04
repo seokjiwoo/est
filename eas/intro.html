@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>즐거운 항공여행의 짜릿한 추억을 선사하겠습니다. ▒▒이스타항공▒▒</title>
+	<link rel="stylesheet" href="/eas/css/import.css">
+	<script type="text/javascript" src="/eas/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="/eas/js/script.js"></script>
+</head>
+<body>
+	<p><img src="/eas/images/img/intro.jpg" class="w100p" alt="" /></p>
+	<script>
+		$(window).load(function(){
+			moveMain(); // 페이지 이동 함수호출
+		});
+		/* 페이지 이동 함수 */
+		function moveMain(){
+			var Second = 5000; // 메인페이지로 이동하기까지 걸리는 시간 (예 1000 / 1초)
+			setTimeout(function(){
+				location.href = "/eas/index.html"
+			},Second);
+		};
+	</script>
+</body>	
+</html>

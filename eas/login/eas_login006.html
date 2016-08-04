@@ -1,0 +1,61 @@
+<? include "../inc/header.html"; ?>
+	<section class="location">
+		<ul>
+			<li><a href="#"><img src="../images/icon/home.png" alt="메인바로가기" /></a></li>
+			<li>Membership </li>
+			<li>비밀번호 찾기</li>
+		</ul>
+	</section>
+	<section class="pagetitle"><h2>비밀번호 찾기</h2></section>
+	<section class="contents_area mgb0">
+		<div class="contents login">
+			<p class="bd">최초 회원가입 시, 등록한 이메일 주소를 분실한 경우에는 <em class="cred">예약센터(1544-0080)</em>으로 문의하여 주시기 바랍니다.</p>
+			<div class="log_tables mt15 pb15 bdb1">
+				<table summary="비밀번호 찾기표">
+					<caption>비밀번호 찾기표</caption>
+					<tbody>
+						<tr>
+							<td><span class="b_input"><input type="text" class="in_text" title="이름입력" value="이름을 입력해주세요." /></span></td>
+						</tr>
+						<tr>
+							<td><span class="b_input"><input type="text" class="in_text" title="이메일입력" value="이메일을 입력해주세요." /></span></td>
+						</tr>
+						<tr>
+							<td>
+								<ul class="input_list">
+									<li>
+										<span class="b_select" title="휴대전화번호 앞자리 선택">
+											<select class="sel">
+												<option>010</option>
+											</select>
+										</span>
+									</li>
+									<li><span class="b_input"><input type="text" class="in_text" title="휴대전화번호 첫번째 항목입력" /></span></li>
+									<li><span class="b_input"><input type="text" class="in_text" title="휴대전화번호 두번째 항목입력" /></span></li>
+								</ul>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<h3 class="title mt15">인증방식</h3>
+			<ul class="radio_set mt10 pb15 bdb1">
+				<li>
+					<input type="radio" name="sel" id="sel1" class="rdo" checked />
+					<label for="sel1">이메일</label>
+				</li>
+				<li>
+					<input type="radio" name="sel" id="sel2" class="rdo /">
+					<label for="sel2">휴대폰 SMS</label>
+				</li>
+				<li>
+					<input type="radio" name="sel" id="sel3" class="rdo" />
+					<label for="sel3">아이핀(i-pin)</label>
+				</li>
+			</ul>
+			<div class="mt15">
+				<a href="#" class="l_btn red fff w112 mgauto">비밀번호 찾기</a>
+			</div>
+		</div>
+	</section>
+<? include "../inc/footer.html"; ?>

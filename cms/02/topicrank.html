@@ -1,0 +1,84 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 5;		//LNB 1depth
+var lnbDep2 = 3;		//LNB 2depth
+var lnbDep3 = 0;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>TOPICRANK</h2>
+			<form>
+			<div class="box board_write mt20">
+				<p class="bg"></p>
+				<div>
+					<table class="writeTable">
+							<colgroup><col width="7%" /><col width="27%" /><col width="4%" /><col width="27%" /><col width="6%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>Source</th>
+								<td colspan="5">
+									<select style="width:227px">
+										<option>NEWS</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>Query</th>
+								<td><input type="text" class="txt t5" /></td>
+								<th>Field</th>
+								<td>
+									<select style="width:227px">
+										<option>TMS_RAW_STREAM</option>
+									</select>
+								</td>
+								<th>Analyzer </th>
+								<td>
+									<select style="width:227px">
+										<option>TOPIC</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<th>From</th>
+								<td><input type="text" class="txt t5" /></td>
+								<th>To</th>
+								<td><input type="text" class="txt t5" /></td>
+								<th>Time unit</th>
+								<td>
+									<input type="radio" name="" id="" /> <label for="">Day</label>
+									<input type="radio" name="" id="" /> <label for="">Week</label>
+									<input type="radio" name="" id="" /> <label for="">Month</label>
+								</td>
+							</tr>
+							<tr>
+								<th>Max Result</th>
+								<td colspan="5">
+									<select style="width:227px">
+										<option>ALL</option>
+									</select>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+				</div>
+			</div>
+			</form>
+			<p class="btn_c">
+				<a href="" class="btn btn_box2"><b>GET TOPICRANK</b></a>
+			</p>
+			<div class="box board_write mt20">
+				<p class="bg"></p>
+				<div>
+					결과값 출력위치
+				</div>
+			</div>
+	</article>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+
+<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/head.html" ; ?>
+
+<script type="text/javascript">
+var gnbDep = 2;		//GNB depth
+var lnbDep1 = 1;		//LNB 1depth
+var lnbDep2 = 3;		//LNB 2depth
+var lnbDep3 = 0;		//LNB 3depth
+</script>
+
+<section id="container">
+	<? include_once $_SERVER["DOCUMENT_ROOT"]."/inc/lnb_mobile.html" ; ?>
+	<article>
+		<h2>회원 가입 현황 <span>수정</span></h2>
+			<div class="box">
+				<h3>회원 상세정보</h3>
+					<div>
+						<form>
+						<table class="writeTable">
+							<colgroup><col width="9.5%" /><col width="43%" /><col width="8%" /><col width="*" /></colgroup>
+							<tbody>
+							<tr>
+								<th>아이디</th>
+								<td>choiyoseb</td>
+								<th>구분</th>
+								<td>스마트폰</td>
+							</tr>
+							<tr>
+								<th>비밀번호</th>
+								<td colspan="3">
+									qwerasdf1
+								</td>
+							</tr>
+							<tr>
+								<th>비밀번호 초기화</th>
+								<td colspan="3">
+									<a href="" class="btn btn_board1 reset"><b><img src="/img/common/icon_reset.png" alt="" />비밀번호초기화</b></a>
+									<span class="prefer_red ml20">비밀번호 초기화 클릭 시 기본 비밀번호는 <b class="point_red">abcd1234</b>로 초기화 됩니다.
+								</td>
+							</tr>
+							<tr>
+								<th>이름</th>
+								<td>장정원</td>
+								<th>주민등록번호</th>
+								<td>770706 - *******</td>
+							</tr>
+							<tr>
+								<th>이메일</th>
+								<td>8690748@hanmail.net</td>
+								<th>연락처(휴대폰)</th>
+								<td>
+									<input type="tel" class="txt t3" /> -
+									<input type="tel" class="txt t3" /> -
+									<input type="tel" class="txt t3" />
+								</td>
+							</tr>
+							<tr>
+								<th>주소</th>
+								<td colspan="3">(111-222) 서울특별시 노원구 상계9동 주공아파트</td>
+							</tr>
+							<tr>
+								<th>상세주소</th>
+								<td colspan="3">1426동 1305호</td>
+							</tr>
+							<tr>
+								<th>회원가입일</th>
+								<td colspan="3">2014/10/26 12:59:02</td>
+							</tr>
+							<tr>
+								<th>이메일 수신 동의</th>
+								<td colspan="3">
+									<input type="radio" name="email" id="email1" value="email1" /> <label for="email1">이메일 수신을 동의합니다.</label>
+									<input type="radio" name="email" id="email2" value="email2" /> <label for="email2">이메일 수신을 동의하지 않습니다.</label>
+								</td>
+							</tr>
+							<tr>
+								<th>SMS 수신 동의</th>
+								<td colspan="3">
+									<input type="radio" name="sms" id="sms1" value="sms1" /> <label for="sms1">SMS 수신을 동의합니다.</label>
+									<input type="radio" name="sms" id="sms2" value="sms2" /> <label for="sms2">SMS 수신을 동의하지 않습니다.</label>
+								</td>
+							</tr>
+							</tbody>
+						</table>
+						<script>
+							$("input").click(function(){
+								alert($(this).attr("value"))
+							});
+						</script>
+						</form>
+					</div>
+			</div>
+			<p class="btn_r">
+				<a href="" class="btn btn_box2"><b>수정하기</b></a>
+			</p>
+			<p class="btn_l">
+				<a href="" class="btn btn_box3"><b>목록으로</b></a>
+			</p>
+	</article>
+</section>
+
+</body>
+</html>
